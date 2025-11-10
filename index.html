@@ -7,59 +7,99 @@
   <meta name="description" content="Pré-lancement de l'e-book Maman, Femme & Cheffe – L’Odyssée d’une jeune maman entrepreneure, par Renée-Lise Vilosa · Bella'Odyssée.">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       line-height: 1.6;
-      background: #fdf6fa;
+      background: linear-gradient(180deg, #fff7fb 0%, #fdf6fa 45%, #fef9ff 100%);
       color: #1a1228;
+      -webkit-font-smoothing: antialiased;
     }
+
     a { color: inherit; text-decoration: none; }
-    header {
-      padding: 1.2rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-    }
-    .brand span {
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      font-size: 0.72rem;
-      display: block;
-      opacity: 0.7;
-    }
-    .hero {
+
+    .site-shell {
       max-width: 1080px;
       margin: 0 auto;
       padding: 1.5rem;
+    }
+
+    /* HEADER / LOGO */
+
+    .site-header {
+      padding-top: 1.2rem;
+      padding-bottom: 0.3rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffe9c4 0%, #f2c58b 45%, #e0a96a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      color: #2a142b;
+      box-shadow: 0 8px 20px rgba(146, 104, 64, 0.35);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .logo-title {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .logo-tagline {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8c7699;
+    }
+
+    /* HERO */
+
+    .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
       gap: 2rem;
     }
+
     @media (max-width: 800px) {
       .hero { grid-template-columns: 1fr; }
     }
+
     .hero-left h1 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
+
     .hero-left p.lead {
       font-size: 1.02rem;
       color: #4a355e;
       margin-bottom: 1rem;
     }
+
     .pill {
       display: inline-block;
       padding: 0.25rem 0.9rem;
       border-radius: 999px;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.9);
       border: 1px solid #f3d9e5;
       font-size: 0.78rem;
       letter-spacing: 0.16em;
@@ -67,6 +107,7 @@
       color: #b58ea5;
       margin-bottom: 0.75rem;
     }
+
     .hero-card {
       background: #ffffff;
       border-radius: 18px;
@@ -76,33 +117,42 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero-card::after {
       content: "";
       position: absolute;
       inset: -40%;
-      background: radial-gradient(circle at top right, rgba(246,214,166,0.35), transparent 60%);
-      opacity: 0.75;
+      background:
+        radial-gradient(circle at top right, rgba(246,214,166,0.28), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(180,149,212,0.20), transparent 55%);
+      opacity: 0.9;
       pointer-events: none;
     }
+
     .hero-card-inner { position: relative; }
+
     .ebook-title {
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 0.15rem;
     }
+
     .ebook-sub {
       font-size: 0.95rem;
       font-style: italic;
       color: #4a355e;
       margin-bottom: 0.9rem;
     }
+
     .hero-list {
       font-size: 0.9rem;
       color: #5a4869;
       padding-left: 1.1rem;
       margin-bottom: 1rem;
     }
+
     .hero-list li { margin-bottom: 0.25rem; }
+
     .note-box {
       background: rgba(247,239,250,0.95);
       border-radius: 14px;
@@ -112,16 +162,17 @@
       color: #3c294b;
       margin-bottom: 1rem;
     }
+
     .ml-wrapper {
       margin-bottom: 0.5rem;
     }
+
     footer {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 1.5rem;
       font-size: 0.82rem;
       color: #8c7699;
+      margin-top: 1rem;
     }
+
     footer a { text-decoration: underline; }
   </style>
 
@@ -146,14 +197,17 @@
   <link rel="stylesheet" href="https://assets.mlcdn.com/fonts.css?version=1762161">
 </head>
 <body>
-  <header>
-    <div class="brand">
-      BELLA'ODYSÉE
-      <span>MAMAN · FEMME · CHEFFE</span>
+    <header class="site-shell site-header">
+    <div class="logo">
+      <div class="logo-mark">BØ</div>
+      <div class="logo-text">
+        <span class="logo-title">Bella’Odyssée</span>
+        <span class="logo-tagline">Maman · Femme · Cheffe</span>
+      </div>
     </div>
   </header>
 
-  <main>
+   <main class="site-shell">
     <section class="hero">
       <div class="hero-left">
         <div class="pill">E-book en pré-lancement</div>
@@ -249,10 +303,8 @@
   </main>
 
   <footer>
-    <p>
-      Écrit par <strong>Renée-Lise Vilosa</strong> · Création Bella’Odyssée ·
-      Contact : <a href="mailto:bellaodyssee@gmail.com">bellaodyssee@gmail.com</a>
-    </p>
+        <p>Écrit par <strong>Renée-Lise Vilosa</strong> · Création <strong>Bella’Odyssée</strong></p>
+    <p>Contact : <a href="mailto:bellaodyssee@gmail.com">bellaodyssee@gmail.com</a></p>
     <p style="margin-top:0.4rem;">
       Site en pré-lancement – e-book "Maman, Femme &amp; Cheffe – L’Odyssée d’une jeune maman entrepreneure". Bientôt disponible en éditions Standard, Premium et Master Premium.
     </p>
