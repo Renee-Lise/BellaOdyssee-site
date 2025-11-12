@@ -1,343 +1,172 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Bella'Odyssée · Maman, Femme & Cheffe — Tome 1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pré-lancement de l'e-book Maman, Femme & Cheffe — Tome 1, par Renée-Lise Vilosa · Bella'Odyssée.">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8" />
+<title>Bella’Odyssée · Maman, Femme & Cheffe — Tome 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Tome 1 — Maman, Femme & Cheffe. L’amour comme moteur, la foi comme direction. Par Renée-Lise Vilosa.">
+<style>
+  :root{
+    --rose:#f6e6ee; --rose2:#fbeff6; --encre:#1a1528; --violet:#6b5b7a;
+    --dore:#f6e3b4; --dore2:#eecf90; --bord:#ead7e5; --blanc:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--encre); line-height:1.65;
+    background: radial-gradient(1200px 900px at 20% 0%, var(--rose) 0%, var(--rose2) 45%, #fff 100%);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1080px;margin:0 auto;padding:20px 16px 36px}
 
-    :root{
-      --rose-bg1:#fff7fb; --rose-bg2:#fdf6fa; --rose-bg3:#fef9ff;
-      --ink:#1a1228; --violet:#4a355e; --muted:#8c7699;
-      --gold1:#f6d6a6; --gold2:#f2b58a;
-    }
+  /* Header */
+  .hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .bo{
+    width:40px;height:40px;border-radius:999px;
+    background: radial-gradient(circle at 30% 25%, #fff3da 0%, #f6d79a 55%, #e7bb6c 100%);
+    box-shadow:0 10px 24px rgba(199,145,88,.28);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;letter-spacing:.08em;color:#2a142b
+  }
+  .btxt{display:flex;flex-direction:column}
+  .btxt .title{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem}
+  .btxt .tag{color:var(--violet);letter-spacing:.18em;text-transform:uppercase;font-size:.7rem}
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(180deg, var(--rose-bg1) 0%, var(--rose-bg2) 45%, var(--rose-bg3) 100%);
-      color: var(--ink);
-      -webkit-font-smoothing: antialiased;
-    }
+  .nav{display:flex;gap:10px}
+  .chip{
+    display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .8rem;border-radius:999px;
+    background:#fff;border:1px solid var(--bord);box-shadow:0 6px 16px rgba(0,0,0,.05);
+    font-size:.85rem
+  }
 
-    a { color: inherit; text-decoration: none; }
-    .site-shell { max-width: 1080px; margin: 0 auto; padding: 1.5rem; }
+  /* Hero */
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;margin-top:18px}
+  @media (max-width:880px){.hero{grid-template-columns:1fr}}
+  .sur{display:inline-block;padding:.28rem .9rem;border-radius:999px;background:#fff;border:1px solid var(--bord);
+       letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;color:#9a86a7;margin-bottom:.8rem}
+  h1{font-size:2.35rem;line-height:1.15;margin-bottom:.4rem}
+  h1 .tome{display:block;font-size:.95rem;letter-spacing:.2em;text-transform:uppercase;color:#8c7699;margin-top:.25rem}
+  .lead{color:#4b3a5b;font-size:1.02rem;margin:.4rem 0 1.0rem}
 
-    /* HEADER / LOGO */
-    .site-header { padding-top: 1.2rem; padding-bottom: 0.3rem; }
-    .topbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-    .logo { display: flex; align-items: center; gap: 0.75rem; }
-    .logo-mark {
-      width: 38px; height: 38px; border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #ffe9c4 0%, #f2c58b 45%, #e0a96a 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; color: #2a142b;
-      box-shadow: 0 8px 20px rgba(146, 104, 64, 0.35);
-    }
-    .logo-text { display: flex; flex-direction: column; gap: 0.05rem; }
-    .logo-title { font-size: 1rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-    .logo-tagline { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .card{
+    position:relative;background:#fff;border:1px solid var(--bord);border-radius:18px;padding:18px 18px 22px;
+    box-shadow:0 20px 48px rgba(15,10,40,.08);overflow:hidden
+  }
+  .card:after{
+    content:"";position:absolute;inset:-40%;
+    background:
+      radial-gradient(700px 380px at 90% -10%, rgba(246,214,166,.33), transparent 60%),
+      radial-gradient(600px 360px at -10% 110%, rgba(180,149,212,.22), transparent 55%);
+    pointer-events:none
+  }
+  .card h3{position:relative;z-index:1;font-size:1.15rem;margin-bottom:.2rem}
+  .card p.sub{position:relative;z-index:1;color:#5f4a70;font-style:italic;margin-bottom:.8rem}
+  .ul{position:relative;z-index:1;margin:.3rem 0 .9rem;padding-left:1.15rem;color:#4b3a5b;font-size:.93rem}
+  .note{position:relative;z-index:1;background:rgba(250,244,252,.9);border:1px dashed var(--bord);
+        border-radius:14px;padding:.8rem .9rem;color:#3c294b;font-size:.9rem;margin-bottom:1rem}
 
-    /* NAV */
-    .nav { display:flex; gap:.6rem; flex-wrap:wrap; }
-    .nav a{
-      display:inline-block; padding:.45rem .9rem; border-radius:999px;
-      background:#fff; border:1px solid #f3d9e5; font-size:.86rem; color:#3c294b;
-    }
-    .nav a:hover{ background:#fdf2f7; }
+  .cta-strip{
+    position:relative;z-index:1;text-align:center;margin-top:.4rem;padding:1rem;border:1px solid #f3e6d2;
+    background:linear-gradient(135deg,#fff7f1,#fbefe2);border-radius:16px
+  }
+  .btn{
+    display:inline-block;padding:.75rem 1.6rem;border-radius:999px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    background:#1a1528;color:var(--dore);box-shadow:0 0 14px rgba(246,227,180,.45)
+  }
+  .btn:hover{opacity:.95}
+  .muted{margin-top:.55rem;font-size:.85rem;color:#5a4869}
 
-    /* HERO */
-    .hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; }
-    @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
-
-    .hero-left h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    .hero-left h1 .tome { font-size: 1rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); display: block; }
-    .hero-left p.lead { font-size: 1.02rem; color: var(--violet); margin-bottom: 1rem; }
-
-    .pill {
-      display: inline-block; padding: 0.25rem 0.9rem; border-radius: 999px;
-      background: rgba(255,255,255,0.9); border: 1px solid #f3d9e5;
-      font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: #b58ea5; margin-bottom: 0.75rem;
-    }
-
-    .hero-card {
-      background: #ffffff; border-radius: 18px; padding: 1.4rem 1.4rem 1.6rem;
-      border: 1px solid rgba(243, 217, 229, 0.9); box-shadow: 0 18px 45px rgba(15, 10, 40, 0.08);
-      position: relative; overflow: hidden;
-    }
-    .hero-card::after {
-      content: ""; position: absolute; inset: -40%;
-      background:
-        radial-gradient(circle at top right, rgba(246,214,166,0.28), transparent 60%),
-        radial-gradient(circle at bottom left, rgba(180,149,212,0.20), transparent 55%);
-      opacity: 0.9; pointer-events: none;
-    }
-    .hero-card-inner { position: relative; }
-    .ebook-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.15rem; }
-    .ebook-sub { font-size: 0.95rem; font-style: italic; color: var(--violet); margin-bottom: 0.9rem; }
-    .hero-list { font-size: 0.9rem; color: #5a4869; padding-left: 1.1rem; margin-bottom: 1rem; }
-    .hero-list li { margin-bottom: 0.25rem; }
-
-    .note-box {
-      background: rgba(247,239,250,0.95); border-radius: 14px; padding: 0.8rem 0.9rem;
-      border: 1px dashed rgba(206,180,221,0.9); font-size: 0.9rem; color: #3c294b; margin-bottom: 1rem;
-    }
-
-    .packs-cta {
-      margin: 1.4rem auto 0.2rem; max-width: 520px; text-align: center; padding: 1.1rem 1rem;
-      border-radius: 16px; background: linear-gradient(135deg, #fdf2f7, #f8e9dd);
-      border: 1px solid rgba(244, 214, 204, 0.9); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-    }
-    .packs-button {
-      display: inline-block; padding: 0.75rem 1.8rem; border-radius: 999px; background: var(--ink); color: var(--gold1);
-      font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; font-weight: 600;
-      box-shadow: 0 0 12px rgba(246, 227, 180, 0.4);
-    }
-    .packs-button:hover { opacity: .95; }
-    .packs-cta-note { margin-top: 0.7rem; font-size: 0.85rem; color: #4b3b5c; }
-
-    /* COLLECTION */
-    .cc-head{ text-align:center; margin:2.2rem 0 1rem; }
-    .cc-title{ font-size:1.35rem; color:#1a1228; margin:0 0 .35rem 0; }
-    .cc-sub{ font-size:.98rem; color:#5a4869; }
-    .cc-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin-top:1.1rem; }
-    @media (max-width:1024px){ .cc-grid{ grid-template-columns:repeat(2,1fr);} }
-    @media (max-width:640px){ .cc-grid{ grid-template-columns:1fr;} }
-
-    .cc-card{
-      background:#fff; border:1px solid rgba(243,217,229,.9); border-radius:16px; padding:1rem;
-      box-shadow:0 12px 28px rgba(0,0,0,.06); position:relative; overflow:hidden;
-    }
-    .cc-card::after{
-      content:""; position:absolute; inset:-40%;
-      background:
-        radial-gradient(circle at top right, rgba(246,214,166,.28), transparent 60%),
-        radial-gradient(circle at bottom left, rgba(180,149,212,.20), transparent 55%);
-      pointer-events:none; opacity:.9;
-    }
-    .cc-card h3{ position:relative; z-index:1; margin:0 0 .25rem 0; font-size:1.05rem; color:#1a1228; }
-    .cc-pill{
-      display:inline-block; position:relative; z-index:1; padding:.18rem .7rem; border-radius:999px;
-      font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
-      background:rgba(246,214,166,.16); color:#513368; margin-bottom:.4rem;
-    }
-    .cc-txt{ position:relative; z-index:1; font-size:.9rem; color:#4b3a5b; margin:.25rem 0 .7rem; }
-    .cc-cta{
-      position:relative; z-index:1; display:inline-block; padding:.6rem 1rem; border-radius:999px; text-decoration:none; font-weight:600; letter-spacing:.08em;
-      background:linear-gradient(135deg,#f6d6a6,#f2b58a); color:#1a1228; box-shadow:0 10px 24px rgba(199,145,88,.32);
-    }
-    .cc-cta:hover{ background:linear-gradient(135deg,#1a1228,#3e284e); color:#fdf6fa; }
-
-    footer { font-size: 0.82rem; color: var(--muted); margin-top: 1rem; }
-    footer a { text-decoration: underline; }
-  </style>
-
-  <link rel="stylesheet" href="https://assets.mlcdn.com/fonts.css?version=1762161">
+  footer{margin-top:26px;font-size:.85rem;color:#8c7699;text-align:center}
+  footer a{text-decoration:underline}
+</style>
+<link rel="stylesheet" href="https://assets.mlcdn.com/fonts.css?version=1762161">
 </head>
 <body>
-  <header class="site-shell site-header">
-    <div class="topbar">
-      <div class="logo">
-        <div class="logo-mark">BØ</div>
-        <div class="logo-text">
-          <span class="logo-title">Bella’Odyssée</span>
-          <span class="logo-tagline">Maman · Femme · Cheffe</span>
+  <div class="container">
+    <header class="hdr">
+      <div class="brand">
+        <div class="bo">BØ</div>
+        <div class="btxt">
+          <span class="title">Bella’Odyssée</span>
+          <span class="tag">Maman · Femme · Cheffe</span>
         </div>
       </div>
       <nav class="nav">
-        <a href="index.html">Tome 1</a>
-        <a href="packs.html">Packs</a>
-        <a href="tome2.html">Tome 2</a>
-        <a href="mailto:bella.odyssee@hotmail.com">Contact</a>
+        <a class="chip" href="packs.html">🎁 Packs</a>
+        <a class="chip" href="tome2.html">📘 Tome 2</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="site-shell">
     <section class="hero">
-      <div class="hero-left">
-        <div class="pill">E-book en pré-lancement</div>
-        <h1>
-          Maman, Femme &amp; Cheffe
-          <span class="tome">TOME 1</span>
-        </h1>
-        <p class="lead">L’Odyssée d’une jeune maman entrepreneure.</p>
-        <p class="lead" style="font-size:0.96rem;">
-          Un e-book doux et puissant, écrit par Renée-Lise Vilosa pour les jeunes mamans, les femmes ambitieuses
-          – et tous les cœurs qui veulent se reconstruire, entreprendre et retrouver un nouvel équilibre.
-        </p>
+      <div>
+        <span class="sur">E-book en pré-lancement</span>
+        <h1>Maman, Femme &amp; Cheffe <span class="tome">TOME 1</span></h1>
+        <p class="lead">L’odyssée d’une jeune maman entrepreneure — une voix douce et solide pour transformer l’épreuve en élan.</p>
+        <p class="lead">Une lecture pour les femmes, et une lumière ouverte aux pères qui s’y reconnaîtront.</p>
       </div>
 
-      <div class="hero-card">
-        <div class="hero-card-inner">
-          <p class="ebook-title">Rejoins la liste d’attente 💌</p>
-          <p class="ebook-sub">Inscris-toi pour recevoir un extrait exclusif et être prévenu(e) dès la sortie de l’e-book.</p>
+      <div class="card">
+        <h3>Rejoins la liste d’attente 💌</h3>
+        <p class="sub">Reçois un extrait exclusif et l’annonce du lancement.</p>
 
-          <ul class="hero-list">
-            <li>Un parcours de résilience et de renaissance partagé avec sincérité.</li>
-            <li>Des clés de mindset pour transformer les épreuves en tremplin.</li>
-            <li>Des conseils concrets d’organisation &amp; d’entrepreneuriat.</li>
-            <li>Une voix féminine, poétique et professionnelle, ouverte aussi aux pères qui se reconnaîtront.</li>
-          </ul>
+        <ul class="ul">
+          <li>Un parcours vrai de résilience et de renouveau.</li>
+          <li>Des clés de mindset + des conseils d’organisation.</li>
+          <li>Un style poétique & professionnel, ancré dans le réel.</li>
+        </ul>
 
-          <div class="note-box">
-            📖 <strong>En cours d’écriture</strong> — Le livre est actuellement en création.
-            <br>💌 Laisse ton e-mail pour faire partie des premières personnes informées du lancement.
-          </div>
+        <div class="note">📖 <strong>En cours d’écriture.</strong> Laisse ton e-mail pour être avertie en priorité.</div>
 
-          <div class="packs-cta">
-            <a class="packs-button" href="packs.html">Découvrir les packs de l’e-book</a>
-            <p class="packs-cta-note">Versions Découverte, Standard, Premium &amp; Master Premium.</p>
-          </div>
+        <div class="cta-strip">
+          <a class="btn" href="packs.html">Découvrir les packs de l’e-book</a>
+          <div class="muted">Versions Découverte, Standard, Premium &amp; Master Premium.</div>
+        </div>
 
-          <!-- FORMULAIRE MAILERLITE -->
-          <div class="ml-wrapper" style="margin-top:1rem;">
-            <div id="mlb2-33104596" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-33104596">
-              <div class="ml-form-align-center ">
-                <div class="ml-form-embedWrapper embedForm">
-                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                    <div class="ml-form-embedContent">
-                      <h4>Maman, Femme & Cheffe 💖</h4>
-                      <p>Inscris-toi pour recevoir un extrait exclusif et être prévenu(e) dès la sortie de l’e-book ✨</p>
-                    </div>
-
-                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1907573/forms/170524434745001200/subscribe" method="post" target="_blank">
-                      <div class="ml-form-formContent">
-                        <div class="ml-form-fieldRow ml-last-item">
-                          <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                            <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
-                          </div>
-                        </div>
+        <!-- MailerLite -->
+        <div id="mlb2-33104596" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-33104596" style="margin-top:12px;">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm" style="max-width:420px;margin:0 auto;">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1907573/forms/170524434745001200/subscribe" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
                       </div>
-                      <input type="hidden" name="ml-submit" value="1">
-                      <div class="ml-form-embedSubmit">
-                        <button type="submit" class="primary">💌 Je m’inscris</button>
-                        <button disabled="disabled" style="display:none;" type="button" class="loading">
-                          <div class="ml-form-embedSubmitLoad"></div>
-                          <span class="sr-only">Loading...</span>
-                        </button>
-                      </div>
-                      <input type="hidden" name="anticsrf" value="true">
-                    </form>
-                  </div>
-
-                  <div class="ml-form-successBody row-success" style="display:none">
-                    <div class="ml-form-successContent">
-                      <h4>Merci 💖</h4>
-                      <p>Tu fais désormais partie de la liste d’attente privilégiée pour le lancement de
-                        <em>Maman, Femme &amp; Cheffe — Tome 1</em>.
-                      </p>
                     </div>
                   </div>
-                </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit"><button type="submit" class="primary">💌 Je m’inscris</button></div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
               </div>
-              <script>
-                function ml_webform_success_33104596() {
-                  var $ = ml_jQuery || jQuery;
-                  document.querySelector('.ml-subscribe-form-33104596 .row-success').style.display='block';
-                  document.querySelector('.ml-subscribe-form-33104596 .row-form').style.display='none';
-                }
-              </script>
-              <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
-              <script>fetch("https://assets.mailerlite.com/jsonp/1907573/forms/170524434745001200/takel");</script>
+              <div class="ml-form-successBody row-success" style="display:none;text-align:center;padding:12px 6px 2px">
+                <h4>Merci 💖</h4>
+                <p>Tu es bien inscrite pour <em>Maman, Femme &amp; Cheffe — Tome 1</em>.</p>
+              </div>
             </div>
-            <p style="font-size:0.78rem;color:#6b5b7a;margin-top:.4rem;">
-              Aucun spam, uniquement des nouvelles douces et inspirantes autour de Bella'Odyssée.
-            </p>
           </div>
+          <script>
+            function ml_webform_success_33104596(){
+              document.querySelector('#mlb2-33104596 .row-success').style.display='block';
+              document.querySelector('#mlb2-33104596 .row-form').style.display='none';
+            }
+          </script>
+          <script src="https://groot.mailerlite.com/js/w/webforms.min.js"></script>
+          <script>fetch("https://assets.mailerlite.com/jsonp/1907573/forms/170524434745001200/takel");</script>
         </div>
       </div>
     </section>
 
-    <!-- ====== Collection ====== -->
-    <section id="collection" class="cc-wrap site-shell" style="margin:2.2rem auto 2.6rem;">
-      <div class="cc-head">
-        <h2 class="cc-title">Collection complète · Bella’Odyssée Éditions</h2>
-        <p class="cc-sub"><em>“Entre deux marées, le Tome 2 se rapproche : une voix masculine, ancrée, qui marche aux côtés des mères.”</em></p>
-      </div>
-
-      <div class="cc-grid">
-        <article class="cc-card">
-          <span class="cc-pill">Tome 1</span>
-          <h3>Maman, Femme &amp; Cheffe</h3>
-          <p class="cc-txt">Récit & outils pour se relever, s’organiser, entreprendre avec douceur et ambition.</p>
-          <a class="cc-cta" href="index.html">Ouvrir le Tome 1</a>
-        </article>
-
-        <article class="cc-card">
-          <span class="cc-pill">Packs</span>
-          <h3>Formats &amp; Offres</h3>
-          <p class="cc-txt">Découverte, Standard, Premium ou Master Premium — choisis ton rythme et tes bonus.</p>
-          <a class="cc-cta" href="packs.html">Découvrir les packs</a>
-        </article>
-
-        <article class="cc-card">
-          <span class="cc-pill">Tome 2</span>
-          <h3>Papa, Homme &amp; Leader</h3>
-          <p class="cc-txt">Voix masculines, résilience et leadership du cœur. Prépare ton prochain chapitre.</p>
-          <a class="cc-cta" href="tome2.html">Découvrir le Tome 2</a>
-        </article>
-
-        <article class="cc-card">
-          <span class="cc-pill">Contact</span>
-          <h3>Écrire à l’autrice</h3>
-          <p class="cc-txt">Une question, une demande pro ou presse ? Je te réponds avec joie.</p>
-          <a class="cc-cta" href="mailto:bella.odyssee@hotmail.com">Contacter Renée-Lise</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <!-- Mentions légales -->
-  <section id="mentions-legales" class="site-shell" style="font-size:0.9rem; color:#4a355e; margin-top:2.5rem; margin-bottom:2rem;">
-    <h2 style="font-size:1.1rem; margin-bottom:0.8rem;">Mentions légales</h2>
-    <p><strong>Éditrice du site</strong><br>
-    Renée-Lise Vilosa – Micro-entrepreneure (auto-entrepreneure)<br>
-    Nom commercial : Bella’Odyssée<br>
-    Adresse : [ton adresse postale complète]<br>
-    E-mail : <a href="mailto:bella.odyssee@hotmail.com">bella.odyssee@hotmail.com</a></p>
-
-    <p><strong>Numéros d’identification</strong><br>
-    SIRET : [ton numéro de SIRET]<br>
-    TVA : TVA non applicable, art. 293 B du CGI.</p>
-
-    <p><strong>Directrice de la publication</strong><br>
-    Renée-Lise Vilosa</p>
-
-    <p><strong>Hébergeur</strong><br>
-    Netlify, Inc. – 2325 3rd Street, Suite 296, San Francisco, CA 94107, États-Unis<br>
-    Site web : <a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a></p>
-
-    <p><strong>Propriété intellectuelle</strong><br>
-    L’ensemble des contenus de ce site (textes, visuels, logo Bella’Odyssée, nom de l’e-book, etc.)
-    sont la propriété exclusive de Renée-Lise Vilosa, sauf mention contraire. Toute reproduction ou utilisation
-    sans autorisation écrite préalable est interdite.</p>
-
-    <p><strong>Données personnelles</strong><br>
-    Les adresses e-mail collectées via le formulaire de liste d’attente sont utilisées uniquement pour
-    envoyer des informations concernant l’e-book, Bella’Odyssée et des contenus associés.<br>
-    Les données sont gérées via la plateforme MailerLite et ne sont ni vendues ni cédées à des tiers.<br>
-    Pour toute demande d’accès, de rectification ou de suppression : 
-    <a href="mailto:bella.odyssee@hotmail.com">bella.odyssee@hotmail.com</a>.<br>
-    Tu peux te désinscrire à tout moment via le lien de désinscription présent en bas de chaque e-mail.</p>
-
-    <p><strong>Responsabilité</strong><br>
-    Les informations partagées sur ce site et dans les contenus associés ont pour objectif d’inspirer et
-    d’accompagner. Elles ne remplacent pas un avis professionnel (juridique, médical, psychologique,
-    financier, etc.). Chaque personne reste responsable de ses choix et de ses actions.</p>
-
-    <p><strong>Crédits</strong><br>
-    Création du site, textes et univers éditorial : Renée-Lise Vilosa – Bella’Odyssée.</p>
-  </section>
-
-  <footer class="site-shell">
-    <p>Écrit par <strong>Renée-Lise Vilosa</strong> · Création <strong>Bella’Odyssée</strong></p>
-    <p>Contact : <a href="mailto:bella.odyssee@hotmail.com">bella.odyssee@hotmail.com</a></p>
-    <p style="font-size:0.82rem; color:#9e8aaa; margin-top:0.4rem;">
-      © 2025 Bella’Odyssée — Tous droits réservés
-    </p>
-  </footer>
+    <footer>
+      © 2025 Bella’Odyssée — Renée-Lise Vilosa ·
+      <a href="packs.html">Packs</a> ·
+      <a href="tome2.html">Tome 2</a> ·
+      <a href="mailto:bella.odyssee@hotmail.com">Contact</a>
+    </footer>
+  </div>
 </body>
 </html>
