@@ -40,22 +40,14 @@
       letter-spacing:.1em; text-transform:uppercase;
     }
 
-    /* Section titre tome */
-    .tome-head {
-      margin:1.6rem 0 .9rem; text-align:center;
-    }
+    .tome-head { margin:1.6rem 0 .9rem; text-align:center; }
     .tome-head h2 { color:var(--bleu-nuit); font-size:1.5rem; }
     .tome-head p { color:#5a4869; font-size:.95rem; }
 
-    /* Cartes offres */
-    .offres-wrapper {
-      display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:1.2rem;
-    }
+    .offres-wrapper { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:1.2rem; }
     @media (max-width:1024px){ .offres-wrapper{grid-template-columns:repeat(2,1fr);} }
-    @media (max-width:720px){
-      body{padding:1rem;} .page{padding:1.5rem 1.1rem 2rem;}
-      .offres-wrapper{grid-template-columns:1fr;}
-    }
+    @media (max-width:720px){ body{padding:1rem;} .page{padding:1.5rem 1.1rem 2rem;} .offres-wrapper{grid-template-columns:1fr;} }
+
     .offre {
       position:relative; background:linear-gradient(145deg,#fff,var(--rose-soft));
       border-radius:18px; padding:1.1rem 1rem 1.3rem; border:1px solid var(--bordure);
@@ -85,10 +77,7 @@
     }
     .cta a:hover{ opacity:.9; transform:scale(1.03); }
 
-    /* Tableau tarifs */
-    .tarifs {
-      overflow:auto; border:1px solid #f0e3ee; border-radius:12px; background:#fff; margin-top:1rem;
-    }
+    .tarifs { overflow:auto; border:1px solid #f0e3ee; border-radius:12px; background:#fff; margin-top:1rem; }
     table { width:100%; border-collapse:collapse; font-size:.95rem; }
     thead { background:#fcf7fb; }
     th,td { padding:10px 12px; border-bottom:1px solid #f0e3ee; }
@@ -119,7 +108,7 @@
     </header>
 
     <!-- ================= TOMe 1 ================= -->
-    <section class="tome">
+    <section class="tome" id="tome1">
       <div class="tome-head">
         <h2>Tome 1 — Maman, Femme & Cheffe</h2>
         <p>Prix de lancement : 7 · 15 · 30 · 60 € · Prix réels : 15 · 25 · 55 · 120 €</p>
@@ -220,14 +209,14 @@
     </section>
 
     <!-- ================= TOMe 2 ================= -->
-    <section class="tome">
+    <section class="tome" id="tome2">
       <div class="tome-head">
         <h2>Tome 2 — Papa, Homme & Leader</h2>
         <p>Offre de lancement : 5 jan → 5 fév 2026 · 7 · 15 · 30 · 60 € · Puis 15 · 25 · 55 · 120 €</p>
       </div>
 
       <section class="offres-wrapper">
-        <!-- Liens à compléter (#) quand tes pages Payhip Tome 2 seront en ligne -->
+        <!-- Remplace les # par tes liens Payhip Tome 2 dès qu'ils sont prêts -->
         <article class="offre">
           <div class="badge-format">Découverte</div>
           <div class="nom-offre">Offre Découverte / Discovery</div>
