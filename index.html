@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Bella'Odyssée · Maman, Femme & Cheffe (Tome 1) – L’Odyssée d’une jeune maman entrepreneure</title>
+  <title>Bella'Odyssée · Maman, Femme & Cheffe — Tome 1</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tome 1 — Maman, Femme & Cheffe : L’Odyssée d’une jeune maman entrepreneure. Collection Foi & Ambition par Renée-Lise Vilosa · Bella’Odyssée.">
+  <meta name="description" content="Pré-lancement de l'e-book Maman, Femme & Cheffe — Tome 1, par Renée-Lise Vilosa · Bella'Odyssée.">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -17,295 +17,73 @@
     }
 
     a { color: inherit; text-decoration: none; }
-
-    .site-shell {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
+    .site-shell { max-width: 1080px; margin: 0 auto; padding: 1.5rem; }
 
     /* HEADER / LOGO */
-
-    .site-header {
-      padding-top: 1.2rem;
-      padding-bottom: 0.3rem;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
+    .site-header { padding-top: 1.2rem; padding-bottom: 0.3rem; }
+    .logo { display: flex; align-items: center; gap: 0.75rem; }
     .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
+      width: 38px; height: 38px; border-radius: 999px;
       background: radial-gradient(circle at 30% 20%, #ffe9c4 0%, #f2c58b 45%, #e0a96a 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      color: #2a142b;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; color: #2a142b;
       box-shadow: 0 8px 20px rgba(146, 104, 64, 0.35);
     }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      gap: 0.05rem;
-    }
-
-    .logo-title {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .logo-tagline {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #8c7699;
-    }
+    .logo-text { display: flex; flex-direction: column; gap: 0.05rem; }
+    .logo-title { font-size: 1rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .logo-tagline { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: #8c7699; }
 
     /* HERO */
+    .hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; }
+    @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
 
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 2rem;
-    }
-
-    @media (max-width: 800px) {
-      .hero { grid-template-columns: 1fr; }
-    }
-
-    .hero-left h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-left p.lead {
-      font-size: 1.02rem;
-      color: #4a355e;
-      margin-bottom: 1rem;
-    }
+    .hero-left h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .hero-left h1 .tome { font-size: 1rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #8c7699; display: block; }
+    .hero-left p.lead { font-size: 1.02rem; color: #4a355e; margin-bottom: 1rem; }
 
     .pill {
-      display: inline-block;
-      padding: 0.25rem 0.9rem;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid #f3d9e5;
-      font-size: 0.78rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #b58ea5;
-      margin-bottom: 0.75rem;
+      display: inline-block; padding: 0.25rem 0.9rem; border-radius: 999px;
+      background: rgba(255,255,255,0.9); border: 1px solid #f3d9e5;
+      font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: #b58ea5; margin-bottom: 0.75rem;
     }
 
     .hero-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 1.4rem 1.4rem 1.6rem;
-      border: 1px solid rgba(243, 217, 229, 0.9);
-      box-shadow: 0 18px 45px rgba(15, 10, 40, 0.08);
-      position: relative;
-      overflow: hidden;
+      background: #ffffff; border-radius: 18px; padding: 1.4rem 1.4rem 1.6rem;
+      border: 1px solid rgba(243, 217, 229, 0.9); box-shadow: 0 18px 45px rgba(15, 10, 40, 0.08);
+      position: relative; overflow: hidden;
     }
-
     .hero-card::after {
-      content: "";
-      position: absolute;
-      inset: -40%;
+      content: ""; position: absolute; inset: -40%;
       background:
         radial-gradient(circle at top right, rgba(246,214,166,0.28), transparent 60%),
         radial-gradient(circle at bottom left, rgba(180,149,212,0.20), transparent 55%);
-      opacity: 0.9;
-      pointer-events: none;
+      opacity: 0.9; pointer-events: none;
     }
-
     .hero-card-inner { position: relative; }
-
-    .ebook-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.15rem;
-    }
-
-    .ebook-sub {
-      font-size: 0.95rem;
-      font-style: italic;
-      color: #4a355e;
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-list {
-      font-size: 0.9rem;
-      color: #5a4869;
-      padding-left: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
+    .ebook-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.15rem; }
+    .ebook-sub { font-size: 0.95rem; font-style: italic; color: #4a355e; margin-bottom: 0.9rem; }
+    .hero-list { font-size: 0.9rem; color: #5a4869; padding-left: 1.1rem; margin-bottom: 1rem; }
     .hero-list li { margin-bottom: 0.25rem; }
 
     .note-box {
-      background: rgba(247,239,250,0.95);
-      border-radius: 14px;
-      padding: 0.8rem 0.9rem;
-      border: 1px dashed rgba(206,180,221,0.9);
-      font-size: 0.9rem;
-      color: #3c294b;
-      margin-bottom: 1rem;
+      background: rgba(247,239,250,0.95); border-radius: 14px; padding: 0.8rem 0.9rem;
+      border: 1px dashed rgba(206,180,221,0.9); font-size: 0.9rem; color: #3c294b; margin-bottom: 1rem;
     }
 
-    .ml-wrapper { margin-bottom: 0.5rem; }
-
-    footer {
-      font-size: 0.82rem;
-      color: #8c7699;
-      margin-top: 1rem;
+    .packs-cta {
+      margin: 1.4rem auto 0.2rem; max-width: 480px; text-align: center; padding: 1.1rem 1rem;
+      border-radius: 16px; background: linear-gradient(135deg, #fdf2f7, #f8e9dd);
+      border: 1px solid rgba(244, 214, 204, 0.9); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
     }
-
-    footer a { text-decoration: underline; }
-
-    /* ----- OFFRES E-BOOK ----- */
-
-    .offers-section {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
+    .packs-button {
+      display: inline-block; padding: 0.75rem 1.8rem; border-radius: 999px; background: #1a1228; color: #f6e3b4;
+      font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; font-weight: 600;
+      box-shadow: 0 0 12px rgba(246, 227, 180, 0.4);
     }
+    .packs-button:hover { opacity: .95; }
+    .packs-cta-note { margin-top: 0.7rem; font-size: 0.85rem; color: #4b3b5c; }
 
-    .offers-section-header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 2rem;
-    }
-
-    .offers-section-header h2 {
-      font-size: 1.6rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .offers-section-header p {
-      font-size: 0.98rem;
-      color: #5a4869;
-    }
-
-    .offers-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1.3rem;
-    }
-
-    @media (max-width: 1024px) {
-      .offers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 640px) {
-      .offers-grid { grid-template-columns: 1fr; }
-    }
-
-    .offer-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 1.3rem 1.2rem 1.4rem;
-      border: 1px solid rgba(243, 217, 229, 0.9);
-      box-shadow: 0 16px 40px rgba(18, 8, 40, 0.06);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-card.highlight {
-      border-color: #f6d6a6;
-      box-shadow: 0 18px 45px rgba(155, 97, 47, 0.18);
-    }
-
-    .offer-badge {
-      display: inline-block;
-      padding: 0.18rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: rgba(246,214,166,0.16);
-      color: #826048;
-      margin-bottom: 0.35rem;
-    }
-
-    .offer-badge.premium {
-      background: rgba(99, 67, 146, 0.12);
-      color: #513368;
-    }
-
-    .offer-name {
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .offer-tagline {
-      font-size: 0.87rem;
-      color: #5a4869;
-      margin-bottom: 0.6rem;
-    }
-
-    .offer-price {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.2rem;
-      color: #1a1228;
-    }
-
-    .offer-price span {
-      font-size: 0.78rem;
-      font-weight: 400;
-      color: #8c7699;
-    }
-
-    .offer-list {
-      font-size: 0.86rem;
-      color: #4b3a5b;
-      margin: 0.4rem 0 0.8rem;
-      padding-left: 1.1rem;
-    }
-
-    .offer-list li { margin-bottom: 0.25rem; }
-
-    .offer-footer-text {
-      font-size: 0.78rem;
-      color: #9e8aaa;
-      margin-bottom: 0.7rem;
-    }
-
-    .btn-offer {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      border-radius: 999px;
-      padding: 0.65rem 1rem;
-      border: none;
-      background: linear-gradient(135deg, #f6d6a6, #f2b58a);
-      color: #1a1228;
-      font-size: 0.9rem;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(199, 145, 88, 0.35);
-    }
-
-    .btn-offer:hover {
-      background: linear-gradient(135deg, #1a1228, #3e284e);
-      color: #fdf6fa;
-    }
-
-    .btn-offer span { margin-left: 0.3rem; font-size: 1rem; }
-
-    /* STYLES MAILERLITE + CTA PACKS */
-
+    /* MAILERLITE */
     .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px;}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
     .ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#1a1228 #1a1228 #1a1228 transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite;}
@@ -317,61 +95,44 @@
     #mlb2-33104596 .ml-form-embedContent h4{color:#1a1228;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:28px;font-weight:700;margin:0 0 10px 0;text-align:left;}
     #mlb2-33104596 .ml-form-embedContent p{color:#000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px;line-height:20px;margin:0 0 10px 0;text-align:left;}
     #mlb2-33104596 .ml-form-fieldRow{margin:0 0 10px 0;width:100%;}
-    #mlb2-33104596 .ml-form-fieldRow input{background-color:#fff!important;color:#333!important;border-color:#ccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:14px!important;line-height:21px!important;padding:10px 10px!important;width:100%!important;box-sizing:border-box!important;}
+    #mlb2-33104596 .ml-form-fieldRow input{background-color:#fff!important;color:#333!important;border-color:#ccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;line-height:21px!important;padding:10px 10px!important;width:100%!important;box-sizing:border-box!important;}
     #mlb2-33104596 .ml-form-embedSubmit button{background-color:#f6d6a6!important;border:none!important;border-radius:4px!important;color:#1a1228!important;cursor:pointer;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:14px!important;font-weight:700!important;line-height:21px!important;padding:10px!important;width:100%!important;box-sizing:border-box!important;}
     #mlb2-33104596 .ml-form-embedSubmit button:hover{background-color:#1a1228!important;color:#fff!important;}
 
-    .packs-cta {
-      margin: 2.5rem auto 2rem;
-      max-width: 480px;
-      text-align: center;
-      padding: 1.4rem 1rem;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #fdf2f7, #f8e9dd);
-      border: 1px solid rgba(244, 214, 204, 0.9);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-    }
+    /* ===== Collection (réordonnée) ===== */
+    .cc-head{ text-align:center; margin:2.2rem 0 1rem; }
+    .cc-title{ font-size:1.35rem; color:#1a1228; margin:0 0 .35rem 0; }
+    .cc-sub{ font-size:.98rem; color:#5a4869; }
+    .cc-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin-top:1.1rem; }
+    @media (max-width:1024px){ .cc-grid{ grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:640px){ .cc-grid{ grid-template-columns:1fr;} }
 
-    .packs-button {
-      display: inline-block;
-      padding: 0.75rem 1.8rem;
-      border-radius: 999px;
-      background: #1a1228;
-      color: #f6e3b4;
-      font-size: 0.9rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 0 12px rgba(246, 227, 180, 0.4);
+    .cc-card{
+      background:#fff; border:1px solid rgba(243,217,229,.9); border-radius:16px; padding:1rem;
+      box-shadow:0 12px 28px rgba(0,0,0,.06); position:relative; overflow:hidden;
     }
+    .cc-card::after{
+      content:""; position:absolute; inset:-40%;
+      background:
+        radial-gradient(circle at top right, rgba(246,214,166,.28), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(180,149,212,.20), transparent 55%);
+      pointer-events:none; opacity:.9;
+    }
+    .cc-card h3{ position:relative; z-index:1; margin:0 0 .25rem 0; font-size:1.05rem; color:#1a1228; }
+    .cc-pill{
+      display:inline-block; position:relative; z-index:1; padding:.18rem .7rem; border-radius:999px;
+      font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+      background:rgba(246,214,166,.16); color:#513368; margin-bottom:.4rem;
+    }
+    .cc-txt{ position:relative; z-index:1; font-size:.9rem; color:#4b3a5b; margin:.25rem 0 .7rem; }
+    .cc-cta{
+      position:relative; z-index:1; display:inline-block; padding:.6rem 1rem; border-radius:999px; text-decoration:none; font-weight:600; letter-spacing:.08em;
+      background:linear-gradient(135deg,#f6d6a6,#f2b58a); color:#1a1228; box-shadow:0 10px 24px rgba(199,145,88,.32);
+    }
+    .cc-cta:hover{ background:linear-gradient(135deg,#1a1228,#3e284e); color:#fdf6fa; }
 
-    .packs-button:hover { opacity: 0.95; }
-
-    .packs-cta-note {
-      margin-top: 0.7rem;
-      font-size: 0.85rem;
-      color: #4b3b5c;
-    }
-
-    /* ——— Bloc transition Tome 2 ——— */
-    .t2-bridge {
-      text-align:center;
-      margin: 1.6rem 0 0.6rem;
-      color:#4a355e;
-      font-size: 0.98rem;
-    }
-    .t2-btn {
-      display:inline-block;margin-top:8px;padding:10px 18px;
-      background:linear-gradient(180deg,#f4e5c8,#d9bf8f);
-      color:#2b2312;font-weight:600;border-radius:10px;
-      text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.18);
-    }
-
-    @media (max-width: 720px) {
-      .packs-button { font-size: 0.8rem; padding: 0.65rem 1.5rem; }
-      .packs-cta { margin-bottom: 3rem; }
-    }
+    footer { font-size: 0.82rem; color: #8c7699; margin-top: 1rem; }
+    footer a { text-decoration: underline; }
   </style>
 
   <link rel="stylesheet" href="https://assets.mlcdn.com/fonts.css?version=1762161">
@@ -390,31 +151,22 @@
   <main class="site-shell">
     <section class="hero">
       <div class="hero-left">
-        <div class="pill">Collection Foi & Ambition · <strong>Tome 1</strong></div>
-        <div class="pill" style="margin-left:.4rem;">E-book en pré-lancement</div>
-
-        <h1>Maman, Femme &amp; Cheffe</h1>
-        <p class="lead">
-          L’Odyssée d’une jeune maman entrepreneure.
-        </p>
+        <div class="pill">E-book en pré-lancement</div>
+        <h1>
+          Maman, Femme &amp; Cheffe
+          <span class="tome">TOME 1</span>
+        </h1>
+        <p class="lead">L’Odyssée d’une jeune maman entrepreneure.</p>
         <p class="lead" style="font-size:0.96rem;">
           Un e-book doux et puissant, écrit par Renée-Lise Vilosa pour les jeunes mamans, les femmes ambitieuses
           – et tous les cœurs qui veulent se reconstruire, entreprendre et retrouver un nouvel équilibre.
         </p>
-
-        <!-- ✨ Transition poétique vers le Tome 2 -->
-        <div class="t2-bridge">
-          <em>La collection s’agrandit, page après page, cœur après cœur…</em><br>
-          <a class="t2-btn" href="tome2.html">📘 Découvrir le Tome 2 — <em>Papa, Homme &amp; Leader</em></a>
-        </div>
       </div>
 
       <div class="hero-card">
         <div class="hero-card-inner">
           <p class="ebook-title">Rejoins la liste d’attente 💌</p>
-          <p class="ebook-sub">
-            Inscris-toi pour recevoir un extrait exclusif et être prévenu(e) dès la sortie de l’e-book.
-          </p>
+          <p class="ebook-sub">Inscris-toi pour recevoir un extrait exclusif et être prévenu(e) dès la sortie de l’e-book.</p>
 
           <ul class="hero-list">
             <li>Un parcours de résilience et de renaissance partagé avec sincérité.</li>
@@ -429,99 +181,12 @@
           </div>
 
           <div class="packs-cta">
-            <a class="packs-button" href="packs.html">
-              Découvrir les packs de l’e-book
-            </a>
-            <p class="packs-cta-note">
-              Versions Découverte, Standard, Premium &amp; Master Premium à prix de pré-lancement.
-            </p>
+            <a class="packs-button" href="packs.html">Découvrir les packs de l’e-book</a>
+            <p class="packs-cta-note">Versions Découverte, Standard, Premium &amp; Master Premium.</p>
           </div>
 
-          <!-- SECTION OFFRES (Tome 1) -->
-          <section id="offres" class="offers-section">
-            <div class="offers-section-header">
-              <h2>Les formules Bella’Odyssée – <strong>Tome 1</strong></h2>
-              <p>
-                Choisis l’édition qui te correspond : première lecture, immersion ou accompagnement complet.
-              </p>
-            </div>
-
-            <div class="offers-grid">
-              <!-- Offre 1 : Découverte -->
-              <article class="offer-card">
-                <div class="offer-badge">Découverte</div>
-                <h3 class="offer-name">Offre Découverte / Discovery</h3>
-                <p class="offer-tagline">Pour faire connaissance avec l’univers du livre, à ton rythme, à prix doux.</p>
-                <p class="offer-price">7 € <span>– offre de lancement prolongée</span></p>
-                <ul class="offer-list">
-                  <li>E-book complet en PDF.</li>
-                  <li>Une citation inspirante envoyée par e-mail.</li>
-                </ul>
-                <p class="offer-footer-text">Idéale pour une première immersion.</p>
-                <a class="btn-offer" href="https://payhip.com/b/qVjb0" target="_blank" rel="noopener">
-                  Accéder à l’offre Découverte <span>✨</span>
-                </a>
-              </article>
-
-              <!-- Offre 2 : Standard -->
-              <article class="offer-card highlight">
-                <div class="offer-badge">Standard</div>
-                <h3 class="offer-name">Édition Standard</h3>
-                <p class="offer-tagline">Lecture intégrale avec outils de clarté et d’organisation.</p>
-                <p class="offer-price">15 € <span>– offre de lancement prolongée</span></p>
-                <ul class="offer-list">
-                  <li>E-book complet (PDF + EPUB).</li>
-                  <li>Feuille de planification “Maman &amp; Cheffe”.</li>
-                  <li>Accès à la newsletter exclusive.</li>
-                </ul>
-                <p class="offer-footer-text">Lecture + premiers pas concrets.</p>
-                <a class="btn-offer" href="https://payhip.com/b/oLpTb" target="_blank" rel="noopener">
-                  Accéder à l’offre Standard <span>💌</span>
-                </a>
-              </article>
-
-              <!-- Offre 3 : Premium -->
-              <article class="offer-card">
-                <div class="offer-badge premium">Premium</div>
-                <h3 class="offer-name">Édition Premium</h3>
-                <p class="offer-tagline">Se reconstruire, s’ancrer, être guidée avec douceur.</p>
-                <p class="offer-price">30 € <span>– offre de lancement prolongée</span></p>
-                <ul class="offer-list">
-                  <li>Tous les éléments de l’Édition Standard.</li>
-                  <li>Mini-guide “Routine douce &amp; efficace”.</li>
-                  <li>Session audio privée “Les mots du cœur”.</li>
-                  <li>Visuels motivation (wallpapers &amp; cartes).</li>
-                </ul>
-                <p class="offer-footer-text">Soutien émotionnel & pratique.</p>
-                <a class="btn-offer" href="https://payhip.com/b/rOSaz" target="_blank" rel="noopener">
-                  Accéder à l’offre Premium <span>🌙</span>
-                </a>
-              </article>
-
-              <!-- Offre 4 : Master Premium -->
-              <article class="offer-card highlight">
-                <div class="offer-badge premium">Master Premium</div>
-                <h3 class="offer-name">Odyssée Master Premium</h3>
-                <p class="offer-tagline">Expérience intégrale : récit, livret bilingue, audio, citations, accompagnement.</p>
-                <p class="offer-price">60 € <span>– offre de lancement prolongée</span></p>
-                <ul class="offer-list">
-                  <li>E-book complet (PDF + EPUB).</li>
-                  <li>Livret enrichi bilingue FR/EN.</li>
-                  <li>Versions audio FR &amp; EN.</li>
-                  <li>18 citations imprimables.</li>
-                  <li>1 accompagnement personnalisé (écrit/vocal).</li>
-                  <li>Accès prioritaire aux prochains tomes.</li>
-                </ul>
-                <p class="offer-footer-text">Pour une renaissance intérieure.</p>
-                <a class="btn-offer" href="https://payhip.com/b/fbwnr" target="_blank" rel="noopener">
-                  Accéder à l’offre Master Premium <span>👑</span>
-                </a>
-              </article>
-            </div>
-          </section>
-
-          <div class="ml-wrapper">
-            <!-- FORMULAIRE MAILERLITE -->
+          <!-- FORMULAIRE MAILERLITE -->
+          <div class="ml-wrapper" style="margin-top:1rem;">
             <div id="mlb2-33104596" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-33104596">
               <div class="ml-form-align-center ">
                 <div class="ml-form-embedWrapper embedForm">
@@ -539,7 +204,6 @@
                           </div>
                         </div>
                       </div>
-
                       <input type="hidden" name="ml-submit" value="1">
                       <div class="ml-form-embedSubmit">
                         <button type="submit" class="primary">💌 Je m’inscris</button>
@@ -556,7 +220,7 @@
                     <div class="ml-form-successContent">
                       <h4>Merci 💖</h4>
                       <p>Tu fais désormais partie de la liste d’attente privilégiée pour le lancement de
-                        <em>Maman, Femme &amp; Cheffe</em>.
+                        <em>Maman, Femme &amp; Cheffe — Tome 1</em>.
                       </p>
                     </div>
                   </div>
@@ -565,32 +229,70 @@
               <script>
                 function ml_webform_success_33104596() {
                   var $ = ml_jQuery || jQuery;
-                  $('.ml-subscribe-form-33104596 .row-success').show();
-                  $('.ml-subscribe-form-33104596 .row-form').hide();
+                  document.querySelector('.ml-subscribe-form-33104596 .row-success').style.display='block';
+                  document.querySelector('.ml-subscribe-form-33104596 .row-form').style.display='none';
                 }
               </script>
               <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
-              <script>
-                fetch("https://assets.mailerlite.com/jsonp/1907573/forms/170524434745001200/takel")
-              </script>
+              <script>fetch("https://assets.mailerlite.com/jsonp/1907573/forms/170524434745001200/takel");</script>
             </div>
-
-            <p style="font-size:0.78rem;color:#3e2f4b;">
-              Aucun spam, uniquement des nouvelles douces et inspirantes autour de Bella’Odyssée.
+            <p style="font-size:0.78rem;color:#6b5b7a;margin-top:.4rem;">
+              Aucun spam, uniquement des nouvelles douces et inspirantes autour de Bella'Odyssée.
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ====== Collection complète (ordre : Tome1 • Packs • Tome2 • Contact) ====== -->
+    <section id="collection" class="cc-wrap site-shell" style="margin:2.2rem auto 2.6rem;">
+      <div class="cc-head">
+        <h2 class="cc-title">Collection complète · Bella’Odyssée Éditions</h2>
+        <p class="cc-sub"><em>“L’amour comme moteur, la foi comme direction.”</em></p>
+      </div>
+
+      <div class="cc-grid">
+        <article class="cc-card">
+          <span class="cc-pill">Tome 1</span>
+          <h3>Maman, Femme &amp; Cheffe</h3>
+          <p class="cc-txt">Récit & outils pour se relever, s’organiser, entreprendre avec douceur et ambition.</p>
+          <a class="cc-cta" href="index.html">Ouvrir le Tome 1</a>
+        </article>
+
+        <article class="cc-card">
+          <span class="cc-pill">Packs</span>
+          <h3>Formats &amp; Offres</h3>
+          <p class="cc-txt">Découverte, Standard, Premium ou Master Premium — choisis ton rythme et tes bonus.</p>
+          <a class="cc-cta" href="packs.html">Découvrir les packs</a>
+        </article>
+
+        <article class="cc-card">
+          <span class="cc-pill">Tome 2</span>
+          <h3>Papa, Homme &amp; Leader</h3>
+          <p class="cc-txt">Voix masculines, résilience et leadership du cœur. Prépare ton prochain chapitre.</p>
+          <a class="cc-cta" href="tome2.html">Découvrir le Tome 2</a>
+        </article>
+
+        <article class="cc-card">
+          <span class="cc-pill">Contact</span>
+          <h3>Écrire à l’autrice</h3>
+          <p class="cc-txt">Une question, une demande pro ou presse ? Je te réponds avec joie.</p>
+          <a class="cc-cta" href="mailto:bella.odyssee@hotmail.com">Contacter Renée-Lise</a>
+        </article>
+      </div>
+    </section>
+    <!-- ====== /Collection ====== -->
+
   </main>
 
+  <!-- Mentions légales (inchangées) -->
   <section id="mentions-legales" class="site-shell" style="font-size:0.9rem; color:#4a355e; margin-top:2.5rem; margin-bottom:2rem;">
     <h2 style="font-size:1.1rem; margin-bottom:0.8rem;">Mentions légales</h2>
     <p><strong>Éditrice du site</strong><br>
     Renée-Lise Vilosa – Micro-entrepreneure (auto-entrepreneure)<br>
     Nom commercial : Bella’Odyssée<br>
     Adresse : [ton adresse postale complète]<br>
-    E-mail : <a href="mailto:bella.odyssee@hotmail.com">bella.odyssee@hotmail.com</a></p>
+    E-mail : <a href="mailto:Bella.odyssee@hotmail.com">Bella.odyssee@hotmail.com</a></p>
 
     <p><strong>Numéros d’identification</strong><br>
     SIRET : [ton numéro de SIRET]<br>
@@ -600,8 +302,8 @@
     Renée-Lise Vilosa</p>
 
     <p><strong>Hébergeur</strong><br>
-    GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, États-Unis<br>
-    Site : <a href="https://pages.github.com" target="_blank" rel="noopener">pages.github.com</a></p>
+    Netlify, Inc. – 2325 3rd Street, Suite 296, San Francisco, CA 94107, États-Unis<br>
+    Site web : <a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a></p>
 
     <p><strong>Propriété intellectuelle</strong><br>
     L’ensemble des contenus de ce site (textes, visuels, logo Bella’Odyssée, nom de l’e-book, etc.)
@@ -613,7 +315,7 @@
     envoyer des informations concernant l’e-book, Bella’Odyssée et des contenus associés.<br>
     Les données sont gérées via la plateforme MailerLite et ne sont ni vendues ni cédées à des tiers.<br>
     Pour toute demande d’accès, de rectification ou de suppression : 
-    <a href="mailto:bella.odyssee@hotmail.com">bella.odyssee@hotmail.com</a>.<br>
+    <a href="mailto:Bella.odyssee@hotmail.com">Bella.odyssee@hotmail.com</a>.<br>
     Tu peux te désinscrire à tout moment via le lien de désinscription présent en bas de chaque e-mail.</p>
 
     <p><strong>Responsabilité</strong><br>
@@ -627,7 +329,7 @@
 
   <footer class="site-shell">
     <p>Écrit par <strong>Renée-Lise Vilosa</strong> · Création <strong>Bella’Odyssée</strong></p>
-    <p>Contact : <a href="mailto:bella.odyssee@hotmail.com">bella.odyssee@hotmail.com</a></p>
+    <p>Contact : <a href="mailto:Bella.odyssee@hotmail.com">Bella.odyssee@hotmail.com</a></p>
     <p style="font-size:0.82rem; color:#9e8aaa; margin-top:0.4rem;">
       © 2025 Bella’Odyssée — Tous droits réservés
     </p>
