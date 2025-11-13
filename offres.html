@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vitrine des offres · Bella’Odyssée Éditions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vue d’ensemble des offres des tomes Bella’Odyssée : packs, e-books et univers à venir." />
+  <style>
+    :root{
+      --rose-soft:#f9e6dd;
+      --fond:#fff8f4;
+      --bleu-nuit:#111629;
+      --doré:#f6e3b4;
+      --violet:#2b1d3f;
+      --texte:#1f2433;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+      background: radial-gradient(circle at top,#fbe9f3,#fff8f4 45%,#f0f4ff 120%);
+      color:var(--texte);
+      line-height:1.6;
+      padding:1.5rem;
+      -webkit-font-smoothing:antialiased;
+    }
+    .page{
+      max-width:1100px;margin:0 auto;
+      background:#ffffff;
+      border-radius:24px;
+      padding:2rem 1.6rem 2.5rem;
+      box-shadow:0 20px 50px rgba(0,0,0,.12);
+      border:1px solid rgba(246,227,180,.6);
+    }
+    header{text-align:center;margin-bottom:1.6rem;}
+    .sur-titre{
+      text-transform:uppercase;letter-spacing:.22em;
+      font-size:.78rem;color:#7c6a8b;margin-bottom:.4rem;
+    }
+    h1{font-size:2rem;color:#161326;margin-bottom:.25rem;}
+    .sous-titre{font-style:italic;color:#5a4569;margin-bottom:.8rem;}
+    .intro{
+      max-width:760px;margin:0 auto 1.4rem;
+      font-size:.96rem;color:#51415c;
+    }
+
+    .nav{
+      display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;
+      margin:0 auto 1.5rem;
+    }
+    .nav a{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-width:150px;
+      padding:.55rem 1.1rem;
+      border-radius:999px;
+      text-decoration:none;
+      background:#111629;
+      color:#f6e3b4;
+      font-size:.84rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      box-shadow:0 10px 24px rgba(0,0,0,.15);
+    }
+    .nav a.secondary{
+      background:#ffffff;
+      color:#111629;
+      border:1px solid rgba(0,0,0,.08);
+      box-shadow:0 6px 16px rgba(0,0,0,.06);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1.3rem;
+    }
+    @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:720px){body{padding:1rem;} .page{padding:1.6rem 1.2rem 2.1rem;} .grid{grid-template-columns:1fr;} }
+
+    .card{
+      border-radius:18px;
+      padding:1.2rem 1.1rem 1.4rem;
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+      border:1px solid rgba(0,0,0,.04);
+      display:flex;flex-direction:column;gap:.55rem;
+    }
+    .card.t1{
+      background: radial-gradient(circle at top,#fff6fb,#ffeef6);
+      border-color:rgba(244,200,214,.9);
+    }
+    .card.t2{
+      background: radial-gradient(circle at top,#232a56,#050818);
+      border-color:rgba(246,227,180,.45);
+      color:#f7f3ff;
+    }
+    .card.t3{
+      background: radial-gradient(circle at top,#151b3a,#050818);
+      border-color:rgba(246,227,180,.3);
+      color:#f7f3ff;
+    }
+
+    .badge{
+      font-size:.78rem;font-weight:600;text-transform:uppercase;
+      letter-spacing:.18em;
+    }
+    .card.t1 .badge{color:#7a4b5f;}
+    .card.t2 .badge,.card.t3 .badge{color:#f6e3b4;}
+
+    .title{font-size:1.08rem;font-weight:700;}
+    .card.t1 .title{color:#331627;}
+    .card.t2 .title,.card.t3 .title{color:#ffffff;}
+
+    .txt{font-size:.9rem;}
+    .card.t1 .txt{color:#5b3f57;}
+    .card.t2 .txt,.card.t3 .txt{color:#e3dcff;}
+
+    .cta{
+      margin-top:.7rem;
+    }
+    .cta a{
+      display:inline-flex;justify-content:center;align-items:center;
+      padding:.6rem .95rem;
+      border-radius:999px;
+      text-decoration:none;
+      font-size:.84rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .card.t1 .cta a{
+      background:#111629;color:#f6e3b4;
+      box-shadow:0 10px 24px rgba(0,0,0,.15);
+    }
+    .card.t2 .cta a{
+      background:#f6e3b4;color:#111629;
+      box-shadow:0 12px 28px rgba(0,0,0,.55);
+    }
+    .card.t3 .cta a{
+      background:rgba(246,227,180,.08);color:#f6e3b4;
+      border:1px solid rgba(246,227,180,.5);
+    }
+
+    .back-top{
+      display:inline-flex;margin:1.8rem auto 0;
+      padding:.55rem 1.1rem;border-radius:999px;
+      text-decoration:none;background:#111629;color:#f6e3b4;
+      font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
+    }
+  </style>
+</head>
+<body id="top">
+  <main class="page">
+    <header>
+      <div class="sur-titre">Bella’Odyssée · Éditions</div>
+      <h1>Vitrine des offres</h1>
+      <p class="sous-titre">« L’amour comme moteur, la foi comme direction. »</p>
+      <p class="intro">
+        Un aperçu global des tomes et de leurs univers. Chaque carte te renvoie vers la page dédiée
+        de l’ouvrage correspondant : packs, détails et liens d’achat.
+      </p>
+
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="packs.html" class="secondary">Packs Tome 1</a>
+        <a href="tome2.html" class="secondary">Page Tome 2</a>
+        <a href="packs_tome3.html" class="secondary">Tome 3 · prévisionnel</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+      <article class="card t1">
+        <div class="badge">Tome 1</div>
+        <div class="title">Maman, Femme &amp; Cheffe</div>
+        <p class="txt">
+          Packs officiels autour de la renaissance intérieure, de l’organisation et de
+          l’odyssée d’une jeune maman entrepreneure.
+        </p>
+        <div class="cta">
+          <a href="packs.html">Voir les packs du Tome 1</a>
+        </div>
+      </article>
+
+      <article class="card t2">
+        <div class="badge">Tome 2</div>
+        <div class="title">Papa, Homme &amp; Leader</div>
+        <p class="txt">
+          Univers bleu nuit et doré, centré sur la résilience masculine, la paternité et
+          un leadership du cœur. Packs &amp; outils dédiés.
+        </p>
+        <div class="cta">
+          <a href="tome2.html">Ouvrir la page du Tome 2</a>
+        </div>
+      </article>
+
+      <article class="card t3">
+        <div class="badge">Tome 3</div>
+        <div class="title">À venir</div>
+        <p class="txt">
+          Maquette d’un futur tome, dans une continuité spirituelle &amp; entrepreneuriale.
+          Offres et tarifs seront activés plus tard.
+        </p>
+        <div class="cta">
+          <a href="packs_tome3.html">Voir la maquette Tome 3</a>
+        </div>
+      </article>
+    </section>
+
+    <div style="text-align:center;">
+      <a href="#top" class="back-top">↑ Retour en haut</a>
+    </div>
+  </main>
+</body>
+</html>
