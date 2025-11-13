@@ -2,77 +2,478 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Offres — Papa, Homme & Leader (Tome 2)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Offres officielles du Tome 2 — Papa, Homme & Leader : Découverte, Standard, Premium, Master Premium." />
+  <title>Bella’Odyssée · Papa, Homme & Leader — Tome 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tome 2 — Papa, Homme & Leader : voix masculines, résilience et leadership du cœur. Par Renée-Lise Vilosa · Bella’Odyssée Éditions." />
   <style>
-    :root{
-      --bleu:#0b1226; --bleu-soft:#182744; --encre:#e8e4f2; --doré:#f6e3b4; --bord:#33406a;
+    :root {
+      --bleu-nuit:#060b1a;
+      --bleu-soft:#141a30;
+      --bleu-carte:#101528;
+      --doré:#f6e3b4;
+      --doré-soft:#f0d9a0;
+      --texte:#f4f3ff;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
-      color:var(--encre); line-height:1.6; min-height:100dvh; position:relative; overflow-x:hidden;
-      background:var(--bleu);
-    }
-    /* Halo bleu nuit + voile doré/rosé (effet visuel #1) */
-    body::before{
-      content:""; position:fixed; inset:-35%;
+      line-height:1.6;
+      color:var(--texte);
       background:
-        radial-gradient(1200px 900px at 50% 28%, rgba(255,255,255,.08), transparent 60%),
-        radial-gradient(1100px 850px at 90% 15%, rgba(255,210,190,.10), transparent 60%),
-        radial-gradient(900px 900px at 10% 90%, rgba(12,18,38,.65), transparent 60%);
-      filter: blur(4px) saturate(108%); z-index:-1;
+        radial-gradient(circle at top, #22315f 0%, #060816 40%, #02030a 100%);
+      -webkit-font-smoothing:antialiased;
+      padding:1.5rem;
     }
-    .page{max-width:1100px;margin:0 auto;padding:1.6rem}
-    header{text-align:center;margin-bottom:1.2rem}
-    .tag{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#c7c1d9}
-    h1{font-size:1.95rem;color:#f3efe6;margin:.35rem 0 .15rem}
-    .sub{font-style:italic;color:#e7dcc9;margin-bottom:.8rem}
+    .page{
+      max-width:1080px;
+      margin:0 auto;
+      background:linear-gradient(145deg, rgba(10,14,32,0.96), rgba(8,10,22,0.99));
+      border-radius:22px;
+      padding:1.6rem 1.4rem 2.4rem;
+      border:1px solid rgba(246,227,180,.35);
+      box-shadow:0 22px 60px rgba(0,0,0,.65);
+      position:relative;
+      overflow:hidden;
+    }
+    .page::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(246,227,180,0.24), transparent 60%),
+        radial-gradient(circle at 90% 100%, rgba(120,151,255,0.26), transparent 55%);
+      opacity:0.9;
+      pointer-events:none;
+    }
+    .content{ position:relative; z-index:1; }
 
-    /* Nav */
-    .nav{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin:.6rem 0 1.2rem}
-    .btn{display:inline-block;border-radius:999px;padding:.6rem 1rem;text-decoration:none;
-         font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.88rem}
-    .btn-accueil{background:#0f1630;color:var(--doré);border:1px solid rgba(246,227,180,.35)}
-    .btn-t1{background:#1b254a;color:var(--doré);border:1px solid rgba(246,227,180,.25)}
+    /* TOP BAR */
+    .top {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.8rem;
+      margin-bottom:1.3rem;
+    }
+    .brand { display:flex; align-items:center; gap:.6rem;}
+    .bo{
+      width:36px; height:36px; border-radius:999px;
+      background: radial-gradient(circle at 30% 20%, #ffe9c4 0%, #f2c58b 45%, #e0a96a 100%);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:.95rem; letter-spacing:.08em; color:#2a142b;
+      box-shadow:0 8px 20px rgba(146,104,64,.55);
+    }
+    .brand-txt{
+      display:flex; flex-direction:column;
+    }
+    .brand-txt span:first-child{
+      font-size:0.9rem; letter-spacing:.18em; text-transform:uppercase; color:var(--doré-soft);
+    }
+    .brand-txt span:last-child{
+      font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:#9ca4d8;
+    }
 
-    /* Grille offres */
-    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem}
-    @media (max-width:1024px){ .grid{grid-template-columns:repeat(2,1fr)} }
-    @media (max-width:720px){ .grid{grid-template-columns:1fr} .page{padding:1.2rem} }
+    .nav{
+      display:flex; gap:.5rem; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .nav a{
+      font-size:.8rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      padding:.35rem .85rem;
+      border-radius:999px;
+      border:1px solid rgba(246,227,180,.5);
+      color:var(--doré);
+      text-decoration:none;
+      background:rgba(4,6,18,0.5);
+    }
+    .nav a:hover{
+      background:var(--doré);
+      color:#11101c;
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      margin:.4rem auto 1.6rem;
+      max-width:720px;
+    }
+    .hero h2{
+      font-size:2.1rem;
+      color:var(--doré);
+      letter-spacing:.03em;
+    }
+    .tome{
+      font-size:.9rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:#a7b0ff;
+      display:block;
+      margin-top:.2rem;
+    }
+    .tag{
+      font-style:italic;
+      color:#d3cffc;
+      margin:.6rem 0 .9rem;
+    }
+    .line{
+      width:140px; height:1px;
+      margin:.2rem auto .9rem;
+      background:linear-gradient(90deg, transparent, rgba(246,227,180,.85), transparent);
+    }
+    .lede{
+      font-size:1rem;
+      color:#d8d7f5;
+    }
+
+    /* CARTES OFFRES */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:1.1rem;
+      margin:1.4rem 0 1.2rem;
+    }
+    @media (max-width:1024px){ .grid{ grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:640px){
+      body{padding:1rem;}
+      .page{padding:1.4rem 1.1rem 2.1rem;}
+      .grid{grid-template-columns:1fr;}
+    }
 
     .card{
-      background:linear-gradient(145deg, rgba(18,27,58,.85), rgba(24,39,68,.85));
-      border:1px solid rgba(246,227,180,.22);
-      border-radius:18px; padding:1.05rem 1rem 1.25rem;
-      box-shadow:0 18px 40px rgba(0,0,0,.35);
-      display:flex; flex-direction:column; gap:.5rem;
+      background:linear-gradient(145deg, #151a31, #0f1325);
+      border:1px solid rgba(246,227,180,.28);
+      border-radius:18px;
+      padding:1rem 1rem 1.2rem;
+      box-shadow:0 16px 42px rgba(0,0,0,.7);
+      position:relative;
+      overflow:hidden;
     }
-    .premium{ background:linear-gradient(145deg, rgba(22,32,66,.88), rgba(30,48,86,.88)) }
-    .master{ background:linear-gradient(145deg, rgba(26,36,72,.9), rgba(38,58,100,.9)); border-color:rgba(246,227,180,.35) }
-    .badge{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:#d7d2e5}
-    .title{font-size:1.06rem;font-weight:700;color:#fff4e0}
-    .tagline{font-size:.92rem;color:#e0d9ee}
-    ul{padding-left:1.1rem;color:#dcd7ea}
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(246,227,180,0.28), transparent 55%),
+        radial-gradient(circle at 120% 120%, rgba(108,135,255,0.28), transparent 60%);
+      opacity:.7;
+      pointer-events:none;
+    }
+    .card-inner{ position:relative; z-index:1;}
 
-    .price{margin-top:.2rem;font-size:.95rem}
-    .std{color:#b6b0c8;text-decoration:line-through;font-size:.86rem}
-    .launch{font-weight:800;color:#fff4e0}
-    .badgeL{display:inline-block;background:#0f1630;color:var(--doré);font-size:.72rem;padding:.14rem .5rem;border-radius:999px;letter-spacing:.12em;margin-left:.35rem}
+    .card.master{
+      background:linear-gradient(145deg, #191e35, #14182c);
+      border-color:rgba(246,227,180,.6);
+    }
 
+    .badge{
+      font-size:.8rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--doré);
+      margin-bottom:.25rem;
+    }
+    .title{
+      font-size:1.02rem;
+      font-weight:700;
+      color:var(--doré-soft);
+    }
+    .tagline{
+      font-size:.9rem;
+      color:#d1cfee;
+      margin:.25rem 0 .45rem;
+    }
+    .list{
+      padding-left:1.1rem;
+      font-size:.88rem;
+      color:#e0defa;
+    }
+    .list li{ margin-bottom:.18rem; }
+
+    .prices{
+      margin-top:.55rem;
+      font-size:.9rem;
+    }
+    .std{
+      color:#9a96c2;
+      text-decoration:line-through;
+      font-size:.85rem;
+    }
+    .launch{
+      font-weight:700;
+      color:var(--doré);
+      margin-left:.15rem;
+    }
+    .badgeL{
+      display:inline-block;
+      background:rgba(246,227,180,.11);
+      color:var(--doré-soft);
+      font-size:.72rem;
+      padding:.15rem .5rem;
+      border-radius:999px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin-left:.35rem;
+      border:1px solid rgba(246,227,180,.55);
+    }
+
+    .cta{
+      margin-top:.7rem;
+    }
     .cta a{
-      display:inline-block;margin-top:.55rem;text-decoration:none;background:#0f1630;color:var(--doré);
-      padding:.55rem .9rem;border-radius:999px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase
+      display:inline-block;
+      text-decoration:none;
+      background:var(--doré);
+      color:#11101c;
+      padding:.55rem .9rem;
+      border-radius:999px;
+      font-size:.85rem;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      text-align:center;
+      transition:all .2s ease;
+      width:100%;
+    }
+    .cta a:hover{
+      background:#fff8e0;
+      transform:translateY(-1px);
     }
 
-    .foot{margin:1.4rem 0 0;text-align:center;font-size:.88rem;color:#c5bfd6}
+    /* FOOTER COLLECTION */
+    .cc-wrap{
+      margin:2.1rem 0 0;
+    }
+    .cc-head{
+      text-align:center;
+      margin-bottom:1rem;
+    }
+    .cc-head h3{
+      color:var(--doré-soft);
+      font-size:1.1rem;
+    }
+    .cc-head p{
+      color:#b9b8e8;
+      font-size:.9rem;
+    }
+    .cc-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:1rem;
+      margin-top:.8rem;
+    }
+    @media (max-width:1024px){ .cc-grid{ grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:640px){ .cc-grid{ grid-template-columns:1fr;} }
+
+    .cc-card{
+      background:#101426;
+      border:1px solid rgba(246,227,180,.28);
+      border-radius:16px;
+      padding:1rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.55);
+    }
+    .cc-pill{
+      display:inline-block;
+      padding:.18rem .7rem;
+      border-radius:999px;
+      font-size:.72rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      background:rgba(246,214,166,.1);
+      color:var(--doré-soft);
+      margin-bottom:.4rem;
+    }
+    .cc-cta{
+      display:inline-block;
+      padding:.6rem 1rem;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:.08em;
+      background:linear-gradient(135deg,#f6d6a6,#f2b58a);
+      color:#1a1228;
+      margin-top:.45rem;
+    }
+    .cc-cta:hover{
+      background:linear-gradient(135deg,#fdf8e4,#f6d6a6);
+    }
+
+    footer{
+      text-align:center;
+      font-size:.82rem;
+      color:#a6a4d0;
+      margin-top:1.6rem;
+    }
   </style>
 </head>
 <body>
-  <main class="page">
-    <header>
-      <div class="tag">Bella’Odyssée · Éditions</div>
-      <h1>Offres — Papa, Homme &amp; Leader</h1>
-      <p class="sub">Tome 2 · “Naître à soi-même, tenir bon, guider avec un cœur clair.”</p>
-      <nav
+  <div class="page">
+    <div class="content">
+
+      <!-- TOP -->
+      <div class="top">
+        <div class="brand">
+          <div class="bo">BØ</div>
+          <div class="brand-txt">
+            <span>BELLA’ODYSSÉE · ÉDITIONS</span>
+            <span>Collection résilience & parentalité moderne</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="index.html">Accueil</a>
+          <a href="packs.html">Packs Tome 1</a>
+          <a href="mailto:bella.odyssee@hotmail.com">Contact</a>
+        </nav>
+      </div>
+
+      <!-- HERO -->
+      <section class="hero">
+        <h2>Papa, Homme &amp; Leader <span class="tome">TOME 2</span></h2>
+        <p class="tag">« Naître à soi-même, tenir bon, et guider avec un cœur clair. »</p>
+        <div class="line"></div>
+        <p class="lede">
+          Voix masculines, résilience et leadership du cœur. Ce tome s’adresse aux pères et aux hommes
+          qui se reconstruisent, entreprennent et créent du sens — pour eux, et pour leurs enfants.
+        </p>
+      </section>
+
+      <!-- OFFRES TOME 2 -->
+      <section class="grid">
+        <!-- Découverte -->
+        <article class="card">
+          <div class="card-inner">
+            <div class="badge">Découverte</div>
+            <div class="title">Offre Découverte / Discovery</div>
+            <p class="tagline">Entrer dans l’univers, à prix doux.</p>
+            <ul class="list">
+              <li>E-book complet en PDF.</li>
+              <li>1 citation imprimable (format A6).</li>
+              <li>1 e-mail d’encouragement (semaine 1).</li>
+            </ul>
+            <div class="prices">
+              <span class="std">15 €</span>
+              <span class="launch">7 €</span>
+              <span class="badgeL">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Découverte</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Standard -->
+        <article class="card">
+          <div class="card-inner">
+            <div class="badge">Standard</div>
+            <div class="title">Édition Standard</div>
+            <p class="tagline">Lecture intégrale + premiers outils concrets.</p>
+            <ul class="list">
+              <li>E-book complet (PDF + EPUB).</li>
+              <li>Feuille « Clarté &amp; Objectifs – 30 jours ».</li>
+              <li>Feuille « Routine Focus Papa &amp; Leader ».</li>
+              <li>Newsletter exclusive.</li>
+            </ul>
+            <div class="prices">
+              <span class="std">25 €</span>
+              <span class="launch">15 €</span>
+              <span class="badgeL">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Standard</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Premium -->
+        <article class="card">
+          <div class="card-inner">
+            <div class="badge">Premium</div>
+            <div class="title">Édition Premium</div>
+            <p class="tagline">Ancrage émotionnel & pratique, version masculine.</p>
+            <ul class="list">
+              <li>Tous les éléments de l’Édition Standard.</li>
+              <li>Mini-guide « Routine focus &amp; ancrage » (PDF).</li>
+              <li>Session audio « Voix intérieure &amp; leadership » (MP3).</li>
+              <li>4 citations imprimables (A6 + A4).</li>
+              <li>Wallpapers de motivation.</li>
+            </ul>
+            <div class="prices">
+              <span class="std">55 €</span>
+              <span class="launch">30 €</span>
+              <span class="badgeL">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Premium</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Master Premium -->
+        <article class="card master">
+          <div class="card-inner">
+            <div class="badge">Master Premium</div>
+            <div class="title">Odyssée Master Premium</div>
+            <p class="tagline">Expérience intégrale & accompagnement.</p>
+            <ul class="list">
+              <li>E-book complet (PDF + EPUB).</li>
+              <li>Livret enrichi bilingue FR/EN.</li>
+              <li>Versions audio FR &amp; EN (séparées).</li>
+              <li>18 citations imprimables (A6 + A4).</li>
+              <li>Cahier digital interactif (PDF / Canva).</li>
+              <li>1 accompagnement personnalisé (écrit/vocal).</li>
+              <li>Accès prioritaire aux prochains tomes.</li>
+            </ul>
+            <div class="prices">
+              <span class="std">120 €</span>
+              <span class="launch">60 €</span>
+              <span class="badgeL">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Master Premium</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- COLLECTION / NAV BAS DE PAGE -->
+      <section class="cc-wrap">
+        <div class="cc-head">
+          <h3>Collection complète · Bella’Odyssée Éditions</h3>
+          <p>Une odyssée en plusieurs tomes, entre résilience, foi et parentalité moderne.</p>
+        </div>
+        <div class="cc-grid">
+          <article class="cc-card">
+            <span class="cc-pill">Accueil</span>
+            <h4>Maman, Femme &amp; Cheffe</h4>
+            <p style="color:#d7d6f8;">Retour à la page principale du Tome 1.</p>
+            <a class="cc-cta" href="index.html">Revenir à l’accueil</a>
+          </article>
+
+          <article class="cc-card">
+            <span class="cc-pill">Packs Tome 1</span>
+            <h4>Offres Tome 1</h4>
+            <p style="color:#d7d6f8;">Découvrir les packs et formats associés au Tome 1.</p>
+            <a class="cc-cta" href="packs.html">Voir les packs Tome 1</a>
+          </article>
+
+          <article class="cc-card">
+            <span class="cc-pill">Tome 2</span>
+            <h4>Papa, Homme &amp; Leader</h4>
+            <p style="color:#d7d6f8;">Tu es actuellement sur la page dédiée au Tome 2.</p>
+            <a class="cc-cta" href="tome2.html">Rester sur le Tome 2</a>
+          </article>
+
+          <article class="cc-card">
+            <span class="cc-pill">Contact</span>
+            <h4>Écrire à l’autrice</h4>
+            <p style="color:#d7d6f8;">Une question, un partenariat, un projet presse ?</p>
+            <a class="cc-cta" href="mailto:bella.odyssee@hotmail.com">Contacter Renée-Lise</a>
+          </article>
+        </div>
+      </section>
+
+      <footer>© 2025 Bella’Odyssée — Tous droits réservés</footer>
+    </div>
+  </div>
+</body>
+</html>
