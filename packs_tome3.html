@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Packs — Tome 3 (à venir) | Bella’Odyssée Éditions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maquette d’offres pour un futur Tome 3, dans l’univers bleu nuit & doré Bella’Odyssée." />
+  <style>
+    :root {
+      --bleu-nuit:#070b1f;
+      --bleu-soft:#141936;
+      --doré:#f6e3b4;
+      --creme:#fdf7ed;
+      --texte:#f7f3ff;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;}
+
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+      background: radial-gradient(circle at top, #3b446f, #070b1f 65%, #030510 130%);
+      color:var(--texte);
+      line-height:1.6;
+      padding:1.5rem;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .page{
+      max-width:1100px;
+      margin:0 auto;
+      background: radial-gradient(circle at top,#141936,#050818);
+      border-radius:26px;
+      padding:2rem 1.7rem 2.6rem;
+      box-shadow:0 22px 55px rgba(0,0,0,0.6);
+      border:1px solid rgba(246,227,180,0.25);
+    }
+
+    header{text-align:center;margin-bottom:1.8rem;}
+    .sur-titre{
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      font-size:.78rem;
+      color:rgba(246,227,180,0.85);
+      margin-bottom:.5rem;
+    }
+
+    h1{
+      font-size:2rem;
+      color:#ffffff;
+      margin-bottom:.35rem;
+    }
+
+    .sous-titre{
+      font-style:italic;
+      color:#d2c8ff;
+      margin-bottom:.9rem;
+    }
+
+    .intro{
+      max-width:720px;
+      margin:0 auto 1.4rem;
+      font-size:.96rem;
+      color:#e5ddff;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:center;
+      gap:.6rem;
+      flex-wrap:wrap;
+      margin:0 auto 1.6rem;
+    }
+
+    .nav a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:150px;
+      padding:.55rem 1.1rem;
+      border-radius:999px;
+      text-decoration:none;
+      background:#ffffff;
+      color:#111629;
+      font-size:.86rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      box-shadow:0 12px 28px rgba(0,0,0,0.45);
+    }
+
+    .nav a.dark{
+      background:#070b1f;
+      color:var(--doré);
+      border:1px solid rgba(246,227,180,0.35);
+    }
+
+    .nav a span.icon{margin-right:.4rem;font-size:1rem;}
+
+    .tome-block{
+      margin-top:.4rem;
+      background: radial-gradient(circle at top,#151b3a,#060919);
+      border-radius:22px;
+      padding:1.6rem 1.4rem 2.2rem;
+      border:1px solid rgba(246,227,180,0.4);
+      box-shadow:0 20px 50px rgba(0,0,0,0.65);
+    }
+
+    .tome-head{text-align:center;margin-bottom:1.3rem;}
+    .tome-head h2{
+      font-size:1.6rem;
+      color:var(--doré);
+      margin-bottom:.3rem;
+    }
+    .tome-head p{
+      font-size:.95rem;
+      color:#d6cfff;
+    }
+
+    .badge-pre{
+      display:inline-block;
+      margin-top:.5rem;
+      padding:.18rem .7rem;
+      border-radius:999px;
+      border:1px solid rgba(246,227,180,0.6);
+      font-size:.78rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--doré);
+    }
+
+    .notice{
+      max-width:760px;
+      margin:0 auto 1.4rem;
+      font-size:.9rem;
+      color:#e9e1ff;
+      text-align:center;
+    }
+
+    .offres{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1.2rem;
+    }
+    @media (max-width:820px){ .offres{grid-template-columns:1fr;} body{padding:1rem;} }
+
+    .card{
+      background: radial-gradient(circle at top,#1b2044,#050818);
+      border-radius:18px;
+      padding:1.2rem 1.1rem 1.5rem;
+      border:1px solid rgba(246,227,180,0.35);
+      box-shadow:0 18px 40px rgba(0,0,0,0.7);
+      display:flex;
+      flex-direction:column;
+      gap:.55rem;
+    }
+
+    .badge-format{
+      font-size:.78rem;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--doré);
+    }
+
+    .nom-offre{
+      font-size:1.08rem;
+      font-weight:700;
+      color:#fff;
+    }
+
+    .tagline{
+      font-size:.9rem;
+      color:#e5ddff;
+    }
+
+    .liste{
+      margin:.25rem 0 .3rem;
+      padding-left:1.1rem;
+      font-size:.9rem;
+      color:#d6cfff;
+    }
+
+    .liste li{margin-bottom:.18rem;}
+
+    .cta{
+      margin-top:.75rem;
+    }
+
+    .cta span{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+      padding:.6rem 1rem;
+      border-radius:999px;
+      background:rgba(246,227,180,0.1);
+      border:1px solid rgba(246,227,180,0.55);
+      color:var(--doré);
+      font-size:.86rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    .foot{
+      margin-top:1.8rem;
+      text-align:center;
+      font-size:.85rem;
+      color:#d9d0ff;
+      font-style:italic;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="sur-titre">Bella’Odyssée · Éditions</div>
+      <h1>Packs — Tome 3 (à venir)</h1>
+      <p class="sous-titre">Maquette d’offres inspirée de l’univers bleu nuit &amp; doré.</p>
+      <p class="intro">
+        Cette page est une esquisse de l’univers d’un futur Tome&nbsp;3. Les offres, contenus et tarifs ne sont pas
+        encore actifs. Elle te donne simplement un aperçu de la direction éditoriale et visuelle.
+      </p>
+
+      <nav class="nav">
+        <a href="index.html" class="dark"><span class="icon">⬅️</span>Accueil</a>
+        <a href="packs.html"><span class="icon">📖</span>Packs Tome 1</a>
+        <a href="tome2.html"><span class="icon">📘</span>Page Tome 2</a>
+      </nav>
+    </header>
+
+    <section class="tome-block">
+      <div class="tome-head">
+        <h2>Tome 3 — à venir</h2>
+        <p>Maquette d’offres, prête à accueillir ton prochain chapitre.</p>
+        <div class="badge-pre">Prévisionnel · Non actif</div>
+      </div>
+
+      <p class="notice">
+        Les cartes ci-dessous sont des exemples de packs, pensés pour rester cohérents avec l’univers
+        Bella’Odyssée (bleu nuit, doré, douceur &amp; profondeur). Les liens de paiement seront ajoutés
+        uniquement lorsque le Tome&nbsp;3 sera finalisé.
+      </p>
+
+      <div class="offres">
+        <article class="card">
+          <div class="badge-format">Découverte</div>
+          <div class="nom-offre">Offre Découverte</div>
+          <div class="tagline">Entrer dans l’univers, à prix doux.</div>
+          <ul class="liste">
+            <li>E-book complet en PDF.</li>
+            <li>1 citation imprimable (format A6).</li>
+          </ul>
+          <div class="cta"><span>Bientôt disponible</span></div>
+        </article>
+
+        <article class="card">
+          <div class="badge-format">Standard</div>
+          <div class="nom-offre">Édition Standard</div>
+          <div class="tagline">Lecture intégrale + premiers outils concrets.</div>
+          <ul class="liste">
+            <li>E-book complet (PDF + EPUB).</li>
+            <li>Feuilles d’organisation &amp; clarté.</li>
+          </ul>
+          <div class="cta"><span>Bientôt disponible</span></div>
+        </article>
+
+        <article class="card">
+          <div class="badge-format">Premium</div>
+          <div class="nom-offre">Édition Premium</div>
+          <div class="tagline">Soutien émotionnel &amp; pratique approfondi.</div>
+          <ul class="liste">
+            <li>Tous les éléments de l’Édition Standard.</li>
+            <li>Mini-guide thématique.</li>
+            <li>Session audio intime.</li>
+          </ul>
+          <div class="cta"><span>Bientôt disponible</span></div>
+        </article>
+
+        <article class="card">
+          <div class="badge-format">Master Premium</div>
+          <div class="nom-offre">Odyssée Master Premium</div>
+          <div class="tagline">L’expérience complète, pensée comme un accompagnement.</div>
+          <ul class="liste">
+            <li>E-book, audio, outils &amp; cahier digital.</li>
+            <li>Accompagnement personnalisé.</li>
+          </ul>
+          <div class="cta"><span>Bientôt disponible</span></div>
+        </article>
+      </div>
+
+      <p class="foot">
+        Quand le moment sera venu, ce Tome 3 viendra naturellement prendre sa place dans ta collection.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
