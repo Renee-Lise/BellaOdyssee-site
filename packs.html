@@ -2,419 +2,471 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Packs officiels — Tome 1 · Bella’Odyssée Éditions</title>
+  <title>Packs Bella’Odyssée — Tomes 1 & 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Packs officiels du Tome 1 « Maman, Femme & Cheffe » — Bella’Odyssée Éditions, par Renée-Lise Vilosa." />
+  <meta name="description" content="Découvrez les 4 formats des Tomes 1 et 2 — Bella’Odyssée Éditions, par Renée-Lise Vilosa." />
   <style>
     :root {
       --rose: #f4d6cc;
       --rose-soft: #f9e6dd;
-      --fond: #fff8f4;
-      --bleu-nuit: #111629;
+      --bleu-nuit: #0b0f21;
+      --bleu-soft: #151c33;
       --doré: #f6e3b4;
+      --doré-soft: #f4d6a6;
       --texte: #1f2433;
       --bordure: #e3c8b6;
     }
+    *{box-sizing:border-box;margin:0;padding:0;}
 
-    * { box-sizing:border-box; margin:0; padding:0; }
-
-    body#top {
-      font-family: system-ui,-apple-system,"Segoe UI",sans-serif;
-      background: radial-gradient(circle at top, #fbe9f3, var(--fond) 45%, #f4f4ff 130%);
-      color: var(--texte);
-      line-height: 1.6;
-      padding: 1.5rem;
-      -webkit-font-smoothing: antialiased;
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at top, var(--rose-soft), #ffffff 35%, #dde2ff 70%, var(--bleu-nuit) 120%);
+      color:var(--texte);
+      line-height:1.6;
+      padding:1.5rem;
+      -webkit-font-smoothing:antialiased;
     }
 
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 2rem 1.6rem 2.4rem;
-      box-shadow: 0 20px 50px rgba(0,0,0,.12);
-      border: 1px solid rgba(246,227,180,.7);
+    a{color:inherit;text-decoration:none;}
+
+    .page{
+      max-width:1120px; margin:0 auto;
+      background:rgba(255,255,255,0.94);
+      border-radius:22px;
+      padding:1.8rem 1.5rem 2.4rem;
+      box-shadow:0 20px 55px rgba(0,0,0,0.16);
+      border:1px solid rgba(246,227,180,0.7);
+      position:relative;
+      overflow:hidden;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 1.8rem;
+    .page::before{
+      content:""; position:absolute; inset:-40%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(244,214,204,0.32), transparent 60%),
+        radial-gradient(circle at 90% 110%, rgba(16,22,52,0.55), transparent 55%);
+      opacity:0.9; pointer-events:none;
     }
 
-    .sur-titre {
-      text-transform: uppercase;
-      letter-spacing: .22em;
-      font-size: .78rem;
-      color: #7c6a8b;
-      margin-bottom: .4rem;
-    }
+    .inner{ position:relative; z-index:1; }
 
-    h1 {
-      font-size: 2rem;
-      color: #161326;
-      margin-bottom: .25rem;
-    }
-
-    .sous-titre {
-      font-style: italic;
-      color: #5a4569;
-      margin-bottom: .75rem;
-    }
-
-    .auteur {
-      font-size: .9rem;
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      color: #7d6a82;
-      margin-bottom: .7rem;
-    }
-
-    .intro {
-      max-width: 760px;
-      margin: 0 auto 1.6rem;
-      font-size: .96rem;
-      color: #51415c;
-    }
-
-    .cta-main {
-      display:flex;
-      justify-content:center;
-      gap:.8rem;
-      flex-wrap:wrap;
-      margin-bottom:1.4rem;
-    }
-
-    .cta-main a {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:180px;
-      padding:.7rem 1.6rem;
-      border-radius:999px;
-      text-decoration:none;
-      font-size:.86rem;
-      letter-spacing:.16em;
+    header{text-align:center;margin-bottom:1.4rem;}
+    .sur-titre{
       text-transform:uppercase;
-      box-shadow:0 14px 34px rgba(0,0,0,.14);
+      letter-spacing:.18em;
+      font-size:.78rem;
+      color:#555;
+      margin-bottom:.4rem;
+    }
+    h1{
+      font-size:2rem;
+      color:#1b1428;
+      margin-bottom:.2rem;
+    }
+    .sous-titre{
+      font-style:italic;
+      color:#6b566b;
+      margin-bottom:.5rem;
+    }
+    .auteur{
+      font-size:.86rem;
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      color:#7e6a77;
+      margin-bottom:.6rem;
+    }
+    .signature{
+      font-size:.95rem;
+      color:#5a4869;
+      margin-bottom:.8rem;
+    }
+    .intro{
+      max-width:760px;
+      margin:.4rem auto 1.1rem;
+      font-size:.96rem;
+      color:#4a3c58;
     }
 
-    .cta-main a.primary {
-      background:#111629;
-      color:#f6e3b4;
+    /* NAV */
+    .nav{
+      text-align:center;
+      margin:.4rem auto 1.4rem;
     }
-
-    .cta-main a.secondary {
-      background:#ffffff;
-      color:#111629;
-      border:1px solid rgba(0,0,0,.08);
-      box-shadow:0 8px 22px rgba(0,0,0,.06);
-    }
-
-    .nav {
-      display:flex;
-      justify-content:center;
-      gap:.6rem;
-      flex-wrap:wrap;
-      margin:0 auto 1.7rem;
-    }
-
-    .nav a {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:140px;
+    .nav a{
+      display:inline-block;
+      margin:.2rem .3rem;
       padding:.5rem 1.1rem;
       border-radius:999px;
-      text-decoration:none;
+      background:linear-gradient(135deg,#111629,#1b2340);
+      color:var(--doré);
       font-size:.82rem;
-      letter-spacing:.12em;
       text-transform:uppercase;
-      background:#111629;
-      color:#f6e3b4;
-      box-shadow:0 8px 20px rgba(0,0,0,.12);
+      letter-spacing:.14em;
+    }
+    .nav a.primary{
+      background:linear-gradient(135deg,var(--doré-soft),var(--doré));
+      color:#1a1228;
+      box-shadow:0 8px 20px rgba(246,227,180,0.5);
     }
 
-    .nav a.light {
-      background:#ffffff;
-      color:#111629;
-      border:1px solid rgba(0,0,0,.06);
-      box-shadow:0 6px 16px rgba(0,0,0,.06);
+    /* TITRES TOME */
+    .tome-head{
+      margin:1.6rem 0 .8rem;
+      text-align:left;
     }
-
-    /* Titre section Tome 1 */
-    .tome-head {
-      margin: 1.2rem 0 1rem;
-      text-align:center;
-      padding:1rem 1rem 1.2rem;
-      border-radius:18px;
-      background: linear-gradient(135deg,#fff7fb,#ffeef6);
-      border:1px solid rgba(244,200,214,.9);
+    .tome-label{
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:#8a6a7d;
+      margin-bottom:.15rem;
     }
-
-    .tome-head h2 {
+    .tome-head h2{
       font-size:1.5rem;
-      color:#3a1931;
-      margin-bottom:.25rem;
+      margin-bottom:.15rem;
+      color:#1b1428;
     }
-
-    .tome-head p {
+    .tome-head p{
       font-size:.94rem;
-      color:#77546c;
+      color:#5a4869;
     }
 
-    /* Cartes OFFRES TOME 1 */
-    .offres-wrapper {
+    /* GRID OFFRES */
+    .offres-wrapper{
       display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:1.3rem;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:1.2rem;
+      margin-bottom:1.4rem;
     }
-
-    @media (max-width:900px){
+    @media (max-width:1024px){
+      .offres-wrapper{grid-template-columns:repeat(2,1fr);}
+    }
+    @media (max-width:720px){
+      body{padding:1rem;}
+      .page{padding:1.4rem 1.1rem 2rem;}
       .offres-wrapper{grid-template-columns:1fr;}
-      body#top{padding:1rem;}
-      .page{padding:1.7rem 1.2rem 2.3rem;}
     }
 
-    .offre {
+    .offre{
       position:relative;
-      background: linear-gradient(145deg,#ffffff,var(--rose-soft));
+      background:linear-gradient(145deg,#ffffff,var(--rose-soft));
       border-radius:18px;
-      padding:1.3rem 1.1rem 1.5rem;
+      padding:1.05rem .95rem 1.3rem;
       border:1px solid var(--bordure);
-      box-shadow:0 12px 28px rgba(0,0,0,.06);
+      box-shadow:0 10px 25px rgba(0,0,0,.04);
       display:flex;
       flex-direction:column;
-      gap:.55rem;
+      gap:.5rem;
+    }
+    .t2 .offre{
+      background:linear-gradient(145deg,#ffffff,#e4e6ff);
+      border-color:rgba(39,47,98,0.2);
+    }
+    .offre.premium{
+      background:linear-gradient(145deg,#ffffff,#f8eeda);
+    }
+    .offre.master{
+      background:linear-gradient(145deg,#ffffff,#f7e7d3);
+      border:1px solid rgba(246,227,180,.9);
+      box-shadow:0 14px 35px rgba(17,22,41,.16);
     }
 
-    .offre.premium {
-      background: linear-gradient(145deg,#ffffff,#f8eeda);
-    }
-
-    .offre.master {
-      background: linear-gradient(145deg,#ffffff,#f7e7d3);
-      border-color:rgba(246,227,180,.9);
-      box-shadow:0 16px 38px rgba(0,0,0,.12);
-    }
-
-    .badge-format {
+    .badge-format{
       font-size:.8rem;
       font-weight:600;
       text-transform:uppercase;
       letter-spacing:.16em;
-      color:#7a4b5f;
+      color:#1b1428;
     }
-
-    .nom-offre {
-      font-size:1.08rem;
+    .nom-offre{
+      font-size:1.05rem;
       font-weight:700;
-      color:#331627;
+      color:#1b1428;
     }
-
-    .tagline {
-      font-size:.9rem;
-      color:#5b3f57;
+    .tagline{
+      font-size:.88rem;
+      color:#6b566b;
     }
-
-    .liste {
-      margin:.15rem 0 .3rem;
+    .liste{
+      margin:.1rem 0 .3rem;
       padding-left:1.1rem;
       font-size:.9rem;
-      color:#4f374d;
+      color:#4b3a5b;
     }
+    .liste li{margin-bottom:.15rem;}
 
-    .liste li { margin-bottom:.15rem; }
-
-    .prix-block {
+    .prix-block{
       margin-top:.2rem;
       font-size:.9rem;
+      color:#3a3046;
     }
-
-    .prix-standard {
-      color:#8a6f80;
-      text-decoration:line-through;
-      font-size:.85rem;
-      margin-right:.15rem;
-    }
-
-    .prix-lancement {
-      font-size:1rem;
+    .prix-lancement{
       font-weight:700;
-      color:#331627;
+      color:#111629;
     }
-
-    .badge-lancement {
+    .badge-lancement{
       display:inline-block;
-      background:#111629;
-      color:#f6e3b4;
+      margin-left:.3rem;
+      padding:.14rem .5rem;
+      border-radius:999px;
       font-size:.72rem;
-      padding:.15rem .55rem;
-      border-radius:999px;
       text-transform:uppercase;
       letter-spacing:.12em;
-      margin-left:.35rem;
+      background:#111629;
+      color:var(--doré);
     }
 
-    .cta {
-      margin-top:.7rem;
-    }
-
-    .cta a {
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
+    .cta{margin-top:.55rem;}
+    .cta a{
+      display:inline-block;
       width:100%;
+      text-align:center;
       text-decoration:none;
-      background:#111629;
-      color:#f6e3b4;
-      padding:.65rem 1rem;
+      background:linear-gradient(135deg,#111629,#1b2340);
+      color:var(--doré);
+      padding:.55rem .9rem;
       border-radius:999px;
-      font-size:.86rem;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      box-shadow:0 12px 30px rgba(0,0,0,.16);
-    }
-
-    .cta a:hover { opacity:.96; }
-
-    /* Bouton retour haut */
-    .back-top{
-      display:inline-flex;
-      margin:1.9rem auto 0;
-      padding:.55rem 1.1rem;
-      border-radius:999px;
-      text-decoration:none;
-      background:#111629;
-      color:#f6e3b4;
-      font-size:.82rem;
+      font-size:.83rem;
       letter-spacing:.12em;
       text-transform:uppercase;
-      border:1px solid rgba(0,0,0,.12);
+      transition:all .2s ease;
+    }
+    .cta a:hover{opacity:.94;transform:scale(1.02);}
+
+    .sep{
+      height:1px;
+      margin:1.3rem 0 1.1rem;
+      background:linear-gradient(90deg,transparent,#e3c8b6,transparent);
     }
 
+    .footer-note{
+      margin-top:1.4rem;
+      text-align:center;
+      font-size:.88rem;
+      color:#6b566b;
+    }
+    .footer-note span{
+      display:block;
+      font-size:.8rem;
+      margin-top:.25rem;
+      color:#8a7b95;
+    }
+
+    .back-top{
+      text-align:center;
+      margin-top:1.2rem;
+      font-size:.8rem;
+    }
+    .back-top a{
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#766480;
+    }
   </style>
 </head>
-
-<body id="top">
+<body>
   <main class="page">
-    <header>
-      <div class="sur-titre">Bella’Odyssée · Éditions</div>
-      <h1>Packs officiels — Tome 1</h1>
-      <p class="sous-titre">« L’amour comme moteur, la foi comme direction. »</p>
-      <div class="auteur">Par RENÉE-LISE VILOSA</div>
-      <p class="intro">
-        Choisis l’odyssée qui correspond à ta saison de vie : lecture simple, immersion guidée, ou renaissance complète.
-        <strong>4 formats</strong> pour t’accompagner, à ton rythme, avec amour, foi et ambition.
+    <div class="inner">
+      <header>
+        <div class="sur-titre">Bella’Odyssée Éditions</div>
+        <h1>Packs & Formats — Collection</h1>
+        <p class="sous-titre">Maman, Femme &amp; Cheffe · Papa, Homme &amp; Leader</p>
+        <div class="auteur">Par RENÉE-LISE VILOSA</div>
+        <p class="signature">Une collection autour de la résilience, de la foi et de la parentalité moderne.</p>
+        <p class="intro">
+          Choisis la formule qui correspond à ta saison de vie&nbsp;: simple lecture, immersion guidée,
+          ou expérience complète avec outils, citations imprimables et audio.
+        </p>
+        <nav class="nav">
+          <a href="index.html">Accueil</a>
+          <a href="index.html#collection">Tome 1</a>
+          <a href="tome2.html">Tome 2</a>
+        </nav>
+      </header>
+
+      <!-- ===== TOME 1 ===== -->
+      <section id="tome1" class="tome t1">
+        <div class="tome-head">
+          <div class="tome-label">TOME 1</div>
+          <h2>Maman, Femme &amp; Cheffe</h2>
+          <p>L’amour comme moteur, la foi comme direction.</p>
+        </div>
+
+        <section class="offres-wrapper">
+          <article class="offre">
+            <div class="badge-format">Découverte</div>
+            <div class="nom-offre">Offre Découverte / Discovery</div>
+            <div class="tagline">Pour découvrir l’univers, à prix doux.</div>
+            <ul class="liste">
+              <li>E-book complet en PDF.</li>
+              <li>1 citation inspirante par e-mail.</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">7 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="https://payhip.com/b/qVjb0" target="_blank" rel="noopener">Choisir Découverte</a>
+            </div>
+          </article>
+
+          <article class="offre">
+            <div class="badge-format">Standard</div>
+            <div class="nom-offre">Édition Standard</div>
+            <div class="tagline">Lecture intégrale + premier outil concret.</div>
+            <ul class="liste">
+              <li>E-book complet (PDF + EPUB).</li>
+              <li>Feuille de planification “Maman &amp; Cheffe”.</li>
+              <li>Newsletter exclusive.</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">15 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="https://payhip.com/b/oLpTb" target="_blank" rel="noopener">Choisir Standard</a>
+            </div>
+          </article>
+
+          <article class="offre premium">
+            <div class="badge-format">Premium</div>
+            <div class="nom-offre">Édition Premium</div>
+            <div class="tagline">Soutien émotionnel &amp; pratique en douceur.</div>
+            <ul class="liste">
+              <li>Tous les éléments de l’Édition Standard.</li>
+              <li>Mini-guide “Routine douce &amp; efficace”.</li>
+              <li>Session audio privée “Les mots du cœur”.</li>
+              <li>Visuels motivation (wallpapers &amp; cartes).</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">30 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="https://payhip.com/b/rOSaz" target="_blank" rel="noopener">Choisir Premium</a>
+            </div>
+          </article>
+
+          <article class="offre master">
+            <div class="badge-format">Master Premium</div>
+            <div class="nom-offre">Odyssée Master Premium</div>
+            <div class="tagline">Expérience intégrale &amp; accompagnement.</div>
+            <ul class="liste">
+              <li>E-book complet (PDF + EPUB).</li>
+              <li>Livret enrichi bilingue FR/EN.</li>
+              <li>Versions audio FR &amp; EN.</li>
+              <li>18 citations imprimables.</li>
+              <li>1 accompagnement personnalisé (écrit/vocal).</li>
+              <li>Accès prioritaire aux prochains tomes.</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">60 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="https://payhip.com/b/fbwnr" target="_blank" rel="noopener">Choisir Master Premium</a>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <div class="sep"></div>
+
+      <!-- ===== TOME 2 ===== -->
+      <section id="tome2" class="tome t2">
+        <div class="tome-head">
+          <div class="tome-label">TOME 2</div>
+          <h2>Papa, Homme &amp; Leader</h2>
+          <p>Naître à soi-même, tenir bon, et guider avec un cœur clair.</p>
+        </div>
+
+        <section class="offres-wrapper">
+          <article class="offre">
+            <div class="badge-format">Découverte</div>
+            <div class="nom-offre">Offre Découverte / Discovery</div>
+            <div class="tagline">Pour entrer dans l’univers masculin, à prix doux.</div>
+            <ul class="liste">
+              <li>E-book complet en PDF.</li>
+              <li>1 citation imprimable (format A6).</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">7 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Découverte</a>
+            </div>
+          </article>
+
+          <article class="offre">
+            <div class="badge-format">Standard</div>
+            <div class="nom-offre">Édition Standard</div>
+            <div class="tagline">Lecture intégrale + premiers outils concrets.</div>
+            <ul class="liste">
+              <li>E-book complet (PDF + EPUB).</li>
+              <li>Feuille “Clarté &amp; Objectifs – 30 jours”.</li>
+              <li>Feuille “Routine Focus Papa &amp; Leader”.</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">15 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Standard</a>
+            </div>
+          </article>
+
+          <article class="offre premium">
+            <div class="badge-format">Premium</div>
+            <div class="nom-offre">Édition Premium</div>
+            <div class="tagline">Ancrage émotionnel &amp; pratique, version masculine.</div>
+            <ul class="liste">
+              <li>Tous les éléments de l’Édition Standard.</li>
+              <li>Mini-guide “Routine focus &amp; ancrage”.</li>
+              <li>Session audio “Voix intérieure &amp; leadership”.</li>
+              <li>4 citations imprimables (A6 + A4).</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">30 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Premium</a>
+            </div>
+          </article>
+
+          <article class="offre master">
+            <div class="badge-format">Master Premium</div>
+            <div class="nom-offre">Odyssée Master Premium</div>
+            <div class="tagline">Expérience intégrale &amp; accompagnement.</div>
+            <ul class="liste">
+              <li>E-book complet (PDF + EPUB).</li>
+              <li>Livret enrichi bilingue FR/EN.</li>
+              <li>Versions audio FR &amp; EN (séparées).</li>
+              <li>18 citations imprimables (A6 + A4).</li>
+              <li>Cahier digital interactif.</li>
+              <li>1 accompagnement personnalisé (écrit/vocal).</li>
+            </ul>
+            <div class="prix-block">
+              <strong class="prix-lancement">60 €</strong>
+              <span class="badge-lancement">Lancement</span>
+            </div>
+            <div class="cta">
+              <a href="#" target="_blank" rel="noopener">Choisir Master Premium</a>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <p class="footer-note">
+        Les offres et contenus sont édités par Bella’Odyssée Éditions — Renée-Lise Vilosa.
+        <span>« L’amour comme moteur, la foi comme direction. » · « Naître à soi-même, tenir bon, et guider avec un cœur clair. »</span>
       </p>
 
-      <div class="cta-main">
-        <a href="#tome1" class="primary">Voir les offres — Tome 1</a>
-        <a href="tome2.html" class="secondary">Page dédiée — Tome 2</a>
+      <div class="back-top">
+        <a href="#tome1" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Retour en haut / Tome 1</a>
       </div>
-
-      <nav class="nav">
-        <a href="index.html">⬅️ Accueil</a>
-        <a href="tome2.html" class="light">📘 Page Tome 2</a>
-        <a href="packs_tome3.html" class="light">🌙 Tome 3 · à venir</a>
-      </nav>
-    </header>
-
-    <!-- ================= TOME 1 ================= -->
-    <section id="tome1">
-      <div class="tome-head">
-        <h2>Tome 1 — Maman, Femme &amp; Cheffe</h2>
-        <p>Renaissance intérieure, organisation, mindset de jeune maman entrepreneure.</p>
-      </div>
-
-      <section class="offres-wrapper">
-        <!-- OFFRE 1 – DÉCOUVERTE -->
-        <article class="offre">
-          <div class="badge-format">Découverte</div>
-          <div class="nom-offre">Offre Découverte / Discovery</div>
-          <div class="tagline">Pour découvrir l’univers, à prix doux.</div>
-          <ul class="liste">
-            <li>E-book complet en PDF.</li>
-            <li>1 citation inspirante par e-mail.</li>
-          </ul>
-          <div class="prix-block">
-            <span class="prix-standard">15 €</span>
-            <span class="prix-lancement">7 €</span>
-            <span class="badge-lancement">Lancement</span>
-          </div>
-          <div class="cta">
-            <a href="https://payhip.com/b/qVjb0" target="_blank" rel="noopener">Choisir Découverte</a>
-          </div>
-        </article>
-
-        <!-- OFFRE 2 – STANDARD -->
-        <article class="offre">
-          <div class="badge-format">Standard</div>
-          <div class="nom-offre">Édition Standard</div>
-          <div class="tagline">Lecture intégrale + premier outil concret.</div>
-          <ul class="liste">
-            <li>E-book complet (PDF + EPUB).</li>
-            <li>Feuille de planification « Maman &amp; Cheffe ».</li>
-            <li>Newsletter exclusive.</li>
-          </ul>
-          <div class="prix-block">
-            <span class="prix-standard">25 €</span>
-            <span class="prix-lancement">15 €</span>
-            <span class="badge-lancement">Lancement</span>
-          </div>
-          <div class="cta">
-            <a href="https://payhip.com/b/oLpTb" target="_blank" rel="noopener">Choisir Standard</a>
-          </div>
-        </article>
-
-        <!-- OFFRE 3 – PREMIUM -->
-        <article class="offre premium">
-          <div class="badge-format">Premium</div>
-          <div class="nom-offre">Édition Premium</div>
-          <div class="tagline">Soutien émotionnel &amp; pratique en douceur.</div>
-          <ul class="liste">
-            <li>Tous les éléments de l’Édition Standard.</li>
-            <li>Mini-guide « Routine douce &amp; efficace ».</li>
-            <li>Session audio privée « Les mots du cœur ».</li>
-            <li>Visuels motivation (wallpapers &amp; cartes).</li>
-          </ul>
-          <div class="prix-block">
-            <span class="prix-standard">55 €</span>
-            <span class="prix-lancement">30 €</span>
-            <span class="badge-lancement">Lancement</span>
-          </div>
-          <div class="cta">
-            <a href="https://payhip.com/b/rOSaz" target="_blank" rel="noopener">Choisir Premium</a>
-          </div>
-        </article>
-
-        <!-- OFFRE 4 – MASTER -->
-        <article class="offre master">
-          <div class="badge-format">Master Premium</div>
-          <div class="nom-offre">Odyssée Master Premium</div>
-          <div class="tagline">Expérience intégrale &amp; accompagnement.</div>
-          <ul class="liste">
-            <li>E-book complet (PDF + EPUB).</li>
-            <li>Livret enrichi bilingue FR/EN.</li>
-            <li>Versions audio FR &amp; EN.</li>
-            <li>18 citations imprimables.</li>
-            <li>1 accompagnement personnalisé (écrit / vocal).</li>
-            <li>Accès prioritaire aux prochains tomes.</li>
-          </ul>
-          <div class="prix-block">
-            <span class="prix-standard">120 €</span>
-            <span class="prix-lancement">60 €</span>
-            <span class="badge-lancement">Lancement</span>
-          </div>
-          <div class="cta">
-            <a href="https://payhip.com/b/fbwnr" target="_blank" rel="noopener">Choisir Master Premium</a>
-          </div>
-        </article>
-      </section>
-    </section>
-
-    <div style="text-align:center;">
-      <a href="#top" class="back-top">↑ Retour en haut</a>
     </div>
   </main>
 </body>
