@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Annexes · Tome 1 — Maman, Femme & Cheffe · Bella’Odyssée</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aperçus des annexes et outils pratiques du Tome 1 — Maman, Femme & Cheffe, par Renée-Lise Vilosa · Bella’Odyssée Éditions." />
+  <style>
+    :root {
+      --rose: #f4d6cc;
+      --rose-soft: #fdf3f7;
+      --bleu-nuit: #111629;
+      --doré: #f6e3b4;
+      --texte: #1f2433;
+      --bordure: #e3c8b6;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, #fff7fb 0%, #fdf3f7 30%, #ffffff 70%),
+        linear-gradient(180deg, #fff7fb 0%, #fef9ff 100%);
+      color: var(--texte);
+      line-height: 1.6;
+      padding: 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.96);
+      border-radius: 22px;
+      padding: 1.8rem 1.5rem 2.4rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+      border: 1px solid rgba(246,227,180,0.75);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Bandeau haut */
+    .top {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.8rem;
+      margin-bottom:1.4rem;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+    }
+
+    .bo {
+      width:36px; height:36px; border-radius:999px;
+      background:radial-gradient(circle at 30% 20%, #ffe9c4 0%, #f2c58b 45%, #e0a96a 100%);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:.95rem; letter-spacing:.08em;
+      color:#2a142b; box-shadow:0 8px 20px rgba(146,104,64,.35);
+    }
+
+    .brand h1 {
+      font-size:1rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+    }
+
+    .nav {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.4rem;
+      justify-content:flex-end;
+    }
+
+    .nav a {
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      padding:.45rem .9rem;
+      border-radius:999px;
+      background:#111629;
+      color:var(--doré);
+    }
+
+    .nav a.secondary {
+      background:transparent;
+      border:1px solid rgba(17,22,41,0.18);
+      color:#111629;
+    }
+
+    /* Hero / intro */
+    .hero {
+      text-align:center;
+      margin: .3rem auto 1.6rem;
+    }
+
+    .hero-surtitre {
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      color:#8c7699;
+      margin-bottom:.4rem;
+    }
+
+    .hero h2 {
+      font-size:1.9rem;
+      color:#1a1228;
+      margin-bottom:.2rem;
+    }
+
+    .hero span.tome {
+      display:block;
+      font-size:.9rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:#b08aa9;
+      margin-top:.1rem;
+    }
+
+    .hero-tagline {
+      font-style:italic;
+      color:#4a355e;
+      margin:.45rem 0 .6rem;
+    }
+
+    .hero-line {
+      width:140px;
+      height:1px;
+      margin:.5rem auto 1rem;
+      background:linear-gradient(90deg,transparent,#e7c9f5,transparent);
+    }
+
+    .hero-text {
+      max-width:780px;
+      margin:0 auto;
+      font-size:.98rem;
+      color:#4b3a5b;
+    }
+
+    .hero-text em {
+      color:#8b5f7f;
+    }
+
+    /* Grille annexes */
+    .section-title {
+      font-size:1.1rem;
+      margin:2rem 0 .6rem;
+      color:#1a1228;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1.1rem;
+    }
+
+    @media (max-width:900px){
+      .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width:640px){
+      .grid { grid-template-columns:1fr; }
+      body { padding:1rem; }
+      .page { padding:1.4rem 1.1rem 2rem; }
+    }
+
+    .card {
+      position:relative;
+      background:linear-gradient(145deg,#ffffff,#fdf3f7);
+      border-radius:18px;
+      padding:1.1rem 1rem 1.25rem;
+      border:1px solid rgba(243,217,229,0.9);
+      box-shadow:0 10px 24px rgba(18,8,40,0.06);
+      overflow:hidden;
+    }
+
+    .card::after {
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at top right, rgba(246,214,166,0.28), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(180,149,212,0.20), transparent 55%);
+      opacity:.9;
+      pointer-events:none;
+    }
+
+    .card-inner { position:relative; z-index:1; }
+
+    .card-pill {
+      display:inline-block;
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      padding:.18rem .7rem;
+      border-radius:999px;
+      background:rgba(255,255,255,0.9);
+      border:1px solid rgba(243,217,229,0.9);
+      color:#8c7699;
+      margin-bottom:.35rem;
+    }
+
+    .card h3 {
+      font-size:1rem;
+      margin-bottom:.25rem;
+      color:#1a1228;
+    }
+
+    .card p {
+      font-size:.9rem;
+      color:#4b3a5b;
+      margin-bottom:.3rem;
+    }
+
+    .card ul {
+      font-size:.86rem;
+      color:#5a4869;
+      padding-left:1.1rem;
+    }
+
+    .card ul li {
+      margin-bottom:.18rem;
+    }
+
+    .tag-extrait {
+      display:inline-block;
+      margin-top:.5rem;
+      font-size:.78rem;
+      color:#8c7699;
+      font-style:italic;
+    }
+
+    /* Bloc citations */
+    .quote-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.9rem;
+      margin-top:.8rem;
+    }
+
+    @media (max-width:800px){ .quote-grid{ grid-template-columns:1fr 1fr; } }
+    @media (max-width:580px){ .quote-grid{ grid-template-columns:1fr; } }
+
+    .quote-card {
+      border-radius:14px;
+      padding:.9rem .85rem;
+      background:#fff;
+      border:1px dashed rgba(240,200,220,0.9);
+      font-size:.88rem;
+      color:#4a355e;
+    }
+
+    .quote-card span {
+      display:block;
+      margin-top:.4rem;
+      font-size:.8rem;
+      color:#8c7699;
+    }
+
+    /* Bas de page */
+    .note-fin {
+      margin-top:2rem;
+      font-size:.9rem;
+      color:#5a4869;
+      text-align:center;
+    }
+
+    .note-fin span {
+      display:block;
+      font-size:.82rem;
+      margin-top:.3rem;
+      color:#8c7699;
+    }
+
+    .back-top {
+      margin-top:1.2rem;
+      text-align:center;
+    }
+
+    .back-top a {
+      font-size:.8rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      padding:.45rem .9rem;
+      border-radius:999px;
+      border:1px solid rgba(90,72,105,0.3);
+      background:#fff;
+      color:#4b3a5b;
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="page">
+    <div class="top">
+      <div class="brand">
+        <div class="bo">BØ</div>
+        <h1>Bella’Odyssée · Éditions</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="packs_tome1.html" class="secondary">Packs Tome 1</a>
+        <a href="tome2.html" class="secondary">Tome 2</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <div class="hero-surtitre">Annexes & Outils — Aperçus</div>
+      <h2>Maman, Femme &amp; Cheffe <span class="tome">TOME 1</span></h2>
+      <p class="hero-tagline">“L’amour comme moteur, la foi comme direction.”</p>
+      <div class="hero-line"></div>
+      <p class="hero-text">
+        Cette page rassemble quelques <em>aperçus</em> des annexes, outils pratiques et citations inspirantes
+        du Tome 1. La version complète, détaillée et imprimable se trouve dans l’e-book et les packs
+        associés (Standard, Premium et Master Premium).
+      </p>
+    </section>
+
+    <h3 class="section-title">Outils d’organisation & de douceur du quotidien</h3>
+    <section class="grid">
+      <!-- Carte 1 : Routine douce -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Routine</span>
+          <h3>Routine douce matin & soir</h3>
+          <p>
+            Un cadre simple pour t’aider à ancrer ton énergie, même avec un emploi du temps chargé :
+            quelques minutes pour toi, quelques minutes pour ton foyer.
+          </p>
+          <ul>
+            <li>Matin : 10–20 minutes de centrage, respiration, intentions.</li>
+            <li>Soir : 10–30 minutes pour clore la journée, décharger le mental.</li>
+            <li>Rappel des 3 priorités du lendemain.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : la structure globale et 1 exemple de journée.</span>
+        </div>
+      </article>
+
+      <!-- Carte 2 : Calendrier express -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Planning</span>
+          <h3>Calendrier Express “7 jours d’ancrage”</h3>
+          <p>
+            Un mini-calendrier sur une semaine pour retrouver le fil : maison, cœur, business — sans t’épuiser.
+          </p>
+          <ul>
+            <li>7 cases “Jour après jour” avec un espace <em>Famille / Moi / Projet</em>.</li>
+            <li>Une phrase d’encouragement par jour.</li>
+            <li>Zone de gratitude en fin de semaine.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : 2 jours complets + la zone gratitude.</span>
+        </div>
+      </article>
+
+      <!-- Carte 3 : 3 priorités -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Clarté</span>
+          <h3>Fiche “3 priorités par jour”</h3>
+          <p>
+            Pour ne plus te perdre dans une to-do infinie : chaque jour, tu poses ce qui est
+            vraiment essentiel pour toi, ta famille et ton projet.
+          </p>
+          <ul>
+            <li>Bloc “Maison & famille”.</li>
+            <li>Bloc “Moi & bien-être”.</li>
+            <li>Bloc “Business / projet”.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : 1 modèle de journée prêt à remplir.</span>
+        </div>
+      </article>
+
+      <!-- Carte 4 : Espace émotions -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Intérieur</span>
+          <h3>Journal émotionnel & prière du soir</h3>
+          <p>
+            Une page douce pour déposer ce que tu ressens, ce que tu traverses, ce que tu remets
+            entre les mains de la vie, de Dieu, de ton cœur.
+          </p>
+          <ul>
+            <li>3 questions clés pour “vider le sac” en douceur.</li>
+            <li>Un espace “Souviens-Toi” : ce que tu as déjà surmonté.</li>
+            <li>Une mini-prière de clôture, rédigée pour toi.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : les questions + un exemple de prière.</span>
+        </div>
+      </article>
+
+      <!-- Carte 5 : Vision & foi -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Vision</span>
+          <h3>Page “Amour · Foi · Ambition”</h3>
+          <p>
+            Un support pour aligner ton projet avec ce qui compte vraiment : ton cœur, ta foi, et
+            ce que tu veux transmettre à ton enfant.
+          </p>
+          <ul>
+            <li>Encadré “Ce que je fais par amour”.</li>
+            <li>Encadré “Ce que je choisis, par foi”.</li>
+            <li>Encadré “L’ambition qui me ressemble”.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : structure + exemples inspirants.</span>
+        </div>
+      </article>
+
+      <!-- Carte 6 : Notes & gratitude -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Gratitude</span>
+          <h3>Notes, gratitude & petits miracles</h3>
+          <p>
+            Pour laisser une trace des petits pas, des petites victoires, des clins d’œil que
+            la vie te fait, même les jours difficiles.
+          </p>
+          <ul>
+            <li>Zone “Aujourd’hui, je dis merci pour…”.</li>
+            <li>Zone “Je suis fière de…”.</li>
+            <li>Zone “À retenir pour plus tard”.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : 1 page modèle à recopier autant que tu veux.</span>
+        </div>
+      </article>
+    </section>
+
+    <h3 class="section-title">Citations inspirantes — Aperçu</h3>
+    <section class="quote-grid">
+      <article class="quote-card">
+        « L’amour comme moteur, la foi comme direction. »
+        <span>— Renée-Lise Vilosa, Tome 1</span>
+      </article>
+      <article class="quote-card">
+        « Chaque pas que tu fais, même minuscule, est une preuve que tu as choisi de rester debout. »
+        <span>— Renée-Lise Vilosa</span>
+      </article>
+      <article class="quote-card">
+        « Tu n’as pas besoin d’être parfaite pour être une bonne mère. Tu as juste besoin d’être présente, honnête et aimante. »
+        <span>— Renée-Lise Vilosa</span>
+      </article>
+    </section>
+
+    <p class="note-fin">
+      Ceci n’est qu’un extrait des annexes & outils disponibles dans le Tome 1 et ses packs.
+      <span>
+        Pour accéder aux versions complètes (PDF & imprimables A6/A4), rends-toi sur la page des packs
+        ou directement sur les offres Bella’Odyssée.
+      </span>
+    </p>
+
+    <div class="back-top">
+      <a href="#top">↑ Retour en haut</a>
+    </div>
+  </div>
+</body>
+</html>
