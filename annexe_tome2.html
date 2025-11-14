@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Annexes · Tome 2 — Papa, Homme & Leader · Bella’Odyssée</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aperçus des annexes et outils pratiques du Tome 2 — Papa, Homme & Leader, par Renée-Lise Vilosa · Bella’Odyssée Éditions." />
+  <style>
+    :root {
+      --bleu-nuit: #0b1020;
+      --bleu-soft: #151b32;
+      --doré: #f6e3b4;
+      --texte: #e7ecff;
+      --bordure: rgba(246,227,180,0.65);
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body {
+      font-family: system-ui,-apple-system,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at top, #202a46 0%, #0b1020 45%, #05060c 100%);
+      color: var(--texte);
+      line-height:1.6;
+      padding:1.5rem;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      max-width:1100px;
+      margin:0 auto;
+      background:linear-gradient(145deg, rgba(17,22,41,0.98), rgba(9,11,22,0.98));
+      border-radius:22px;
+      padding:1.8rem 1.5rem 2.4rem;
+      box-shadow:0 20px 50px rgba(0,0,0,0.6);
+      border:1px solid var(--bordure);
+    }
+
+    /* Bandeau haut */
+    .top {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.8rem;
+      margin-bottom:1.4rem;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+    }
+
+    .bo {
+      width:36px; height:36px; border-radius:999px;
+      background:radial-gradient(circle at 30% 20%, #ffe9c4 0%, #f2c58b 45%, #b98b4d 100%);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:.95rem; letter-spacing:.08em;
+      color:#1b1010; box-shadow:0 8px 20px rgba(0,0,0,.7);
+    }
+
+    .brand h1 {
+      font-size:1rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--doré);
+    }
+
+    .nav {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.4rem;
+      justify-content:flex-end;
+    }
+
+    .nav a {
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      padding:.45rem .9rem;
+      border-radius:999px;
+      background:#f6e3b4;
+      color:#111629;
+    }
+
+    .nav a.secondary {
+      background:transparent;
+      border:1px solid rgba(246,227,180,0.5);
+      color:var(--doré);
+    }
+
+    /* Hero */
+    .hero {
+      text-align:center;
+      margin:.3rem auto 1.6rem;
+    }
+
+    .hero-surtitre {
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      color:rgba(246,227,180,0.8);
+      margin-bottom:.4rem;
+    }
+
+    .hero h2 {
+      font-size:1.9rem;
+      color:var(--doré);
+      margin-bottom:.2rem;
+    }
+
+    .hero span.tome {
+      display:block;
+      font-size:.9rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:#c7c9e8;
+      margin-top:.1rem;
+    }
+
+    .hero-tagline {
+      font-style:italic;
+      color:#d0d4ff;
+      margin:.45rem 0 .6rem;
+    }
+
+    .hero-line {
+      width:150px;
+      height:1px;
+      margin:.5rem auto 1rem;
+      background:linear-gradient(90deg,transparent,#f6e3b4,transparent);
+    }
+
+    .hero-text {
+      max-width:780px;
+      margin:0 auto;
+      font-size:.98rem;
+      color:#d4d8f5;
+    }
+
+    .hero-text em { color:#f6e3b4; }
+
+    /* Grille annexes */
+    .section-title {
+      font-size:1.1rem;
+      margin:2rem 0 .7rem;
+      color:var(--doré);
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1.1rem;
+    }
+
+    @media (max-width:900px){
+      .grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width:640px){
+      .grid{ grid-template-columns:1fr; }
+      body{ padding:1rem; }
+      .page{ padding:1.4rem 1.1rem 2rem; }
+    }
+
+    .card {
+      position:relative;
+      background:radial-gradient(circle at top, #222a49 0%, #151b32 50%, #0b1020 100%);
+      border-radius:18px;
+      padding:1.1rem 1rem 1.25rem;
+      border:1px solid rgba(246,227,180,0.45);
+      box-shadow:0 12px 30px rgba(0,0,0,0.6);
+      overflow:hidden;
+    }
+
+    .card::after{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at top right, rgba(245,224,176,0.22), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(88,120,188,0.25), transparent 55%);
+      pointer-events:none;
+    }
+
+    .card-inner{ position:relative; z-index:1; }
+
+    .card-pill{
+      display:inline-block;
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      padding:.18rem .7rem;
+      border-radius:999px;
+      background:rgba(11,16,32,0.85);
+      border:1px solid rgba(246,227,180,0.6);
+      color:var(--doré);
+      margin-bottom:.35rem;
+    }
+
+    .card h3 {
+      font-size:1rem;
+      margin-bottom:.25rem;
+      color:var(--doré);
+    }
+
+    .card p {
+      font-size:.9rem;
+      color:#e1e4ff;
+      margin-bottom:.3rem;
+    }
+
+    .card ul {
+      font-size:.86rem;
+      color:#c8cff5;
+      padding-left:1.1rem;
+    }
+
+    .card ul li { margin-bottom:.18rem; }
+
+    .tag-extrait {
+      display:inline-block;
+      margin-top:.5rem;
+      font-size:.78rem;
+      color:#c8cff5;
+      font-style:italic;
+    }
+
+    /* Citations */
+    .quote-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.9rem;
+      margin-top:.8rem;
+    }
+    @media (max-width:800px){ .quote-grid{ grid-template-columns:1fr 1fr; } }
+    @media (max-width:580px){ .quote-grid{ grid-template-columns:1fr; } }
+
+    .quote-card {
+      border-radius:14px;
+      padding:.9rem .85rem;
+      background:#111629;
+      border:1px dashed rgba(246,227,180,0.5);
+      font-size:.88rem;
+      color:#e4e7ff;
+    }
+
+    .quote-card span {
+      display:block;
+      margin-top:.4rem;
+      font-size:.8rem;
+      color:#f6e3b4;
+    }
+
+    .note-fin {
+      margin-top:2rem;
+      font-size:.9rem;
+      color:#d0d4ff;
+      text-align:center;
+    }
+
+    .note-fin span {
+      display:block;
+      font-size:.82rem;
+      margin-top:.3rem;
+      color:#f6e3b4;
+    }
+
+    .back-top {
+      margin-top:1.2rem;
+      text-align:center;
+    }
+
+    .back-top a {
+      font-size:.8rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      padding:.45rem .9rem;
+      border-radius:999px;
+      border:1px solid rgba(246,227,180,0.5);
+      background:#0b1020;
+      color:var(--doré);
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="page">
+    <div class="top">
+      <div class="brand">
+        <div class="bo">BØ</div>
+        <h1>Bella’Odyssée · Éditions</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="tome2.html" class="secondary">Tome 2</a>
+        <a href="packs_tome2.html" class="secondary">Packs Tome 2</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <div class="hero-surtitre">Annexes & Outils — Aperçus</div>
+      <h2>Papa, Homme &amp; Leader <span class="tome">TOME 2</span></h2>
+      <p class="hero-tagline">“Naître à soi-même, tenir bon, et guider avec un cœur clair.”</p>
+      <div class="hero-line"></div>
+      <p class="hero-text">
+        Voici quelques <em>aperçus</em> des outils pratiques, annexes et citations du Tome 2. La version complète,
+        imprimable et bilingue (FR/EN pour certains contenus) est réservée aux packs Premium et Master Premium.
+      </p>
+    </section>
+
+    <h3 class="section-title">Outils de clarté, équilibre & leadership du cœur</h3>
+    <section class="grid">
+      <!-- Clarté & objectifs -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Clarté</span>
+          <h3>Feuille “Clarté &amp; Objectifs — 30 jours”</h3>
+          <p>
+            Un support pour poser ce qui compte : tes responsabilités, tes projets, ce que tu veux
+            vraiment bâtir pour toi et tes enfants.
+          </p>
+          <ul>
+            <li>Colonne “Vie perso & famille”.</li>
+            <li>Colonne “Travail / projet / business”.</li>
+            <li>Zone “Ce que je décide de lâcher”.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : structure + 7 jours de modèle.</span>
+        </div>
+      </article>
+
+      <!-- Routine focus -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Routine</span>
+          <h3>Routine Focus “Papa &amp; Leader”</h3>
+          <p>
+            Quelques gestes simples pour rester présent pour ta famille, tout en avançant
+            sur ta construction intérieure et tes projets.
+          </p>
+          <ul>
+            <li>Bloc “Présence avec mes enfants”.</li>
+            <li>Bloc “Action concrète pour mon projet”.</li>
+            <li>Bloc “Ancrage & respiration”.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : une journée type + exemple rempli.</span>
+        </div>
+      </article>
+
+      <!-- Équilibre vie perso / projets -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Équilibre</span>
+          <h3>Tableau “Vie perso / Projet / Repos”</h3>
+          <p>
+            Pour ne pas te perdre dans le “toujours plus” : ce tableau t’aide à voir si tu
+            sacrifies trop un pilier au profit des autres.
+          </p>
+          <ul>
+            <li>3 colonnes : Vie perso · Projet · Repos.</li>
+            <li>Code couleur simple à cocher.</li>
+            <li>Mini-bilan de fin de semaine.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : 1 semaine de suivi.</span>
+        </div>
+      </article>
+
+      <!-- Naître à soi-même -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Intérieur</span>
+          <h3>Page “Naître à soi-même”</h3>
+          <p>
+            Une page pour revisiter ton histoire : ce que tu as reçu, ce que tu choisis
+            de garder, ce que tu décides de transformer.
+          </p>
+          <ul>
+            <li>Encadré “D’où je viens”.</li>
+            <li>Encadré “Ce que je refuse de reproduire”.</li>
+            <li>Encadré “L’homme que je deviens”.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : questions-guides & exemple de réécriture.</span>
+        </div>
+      </article>
+
+      <!-- Leadership du cœur -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Leadership</span>
+          <h3>Journal “Leadership du cœur”</h3>
+          <p>
+            Un support pour observer comment tu guides, comment tu protèges, comment tu
+            te parles à toi-même dans les moments difficiles.
+          </p>
+          <ul>
+            <li>Questions sur ta façon de réagir face au stress.</li>
+            <li>Focus “Parole que j’aurais voulu entendre”.</li>
+            <li>Zone “Parole que je choisis de transmettre”.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : 1 page modèle + 1 exemple vécu.</span>
+        </div>
+      </article>
+
+      <!-- Prière / ancrage -->
+      <article class="card">
+        <div class="card-inner">
+          <span class="card-pill">Outil · Ancrage</span>
+          <h3>Prière du courage & ancrage quotidien</h3>
+          <p>
+            Une prière courte, simple, pour les jours où tout est lourd — et où tu choisis quand même
+            de rester debout pour ceux que tu aimes.
+          </p>
+          <ul>
+            <li>Version texte pour lecture silencieuse.</li>
+            <li>Version audio (FR, puis EN) dans les packs avancés.</li>
+            <li>Espace pour écrire ta propre version.</li>
+          </ul>
+          <span class="tag-extrait">Extrait : première partie de la prière + structure à compléter.</span>
+        </div>
+      </article>
+    </section>
+
+    <h3 class="section-title">Citations masculines — Aperçu</h3>
+    <section class="quote-grid">
+      <article class="quote-card">
+        « Nos enfants n’ont pas besoin de parents parfaits, mais de parents courageux qui continuent d’espérer. »
+        <span>— Renée-Lise Vilosa, Tome 2</span>
+      </article>
+      <article class="quote-card">
+        « Élever un enfant et bâtir un rêve relèvent d’un même élan : celui de croire, malgré tout. »
+        <span>— Renée-Lise Vilosa</span>
+      </article>
+      <article class="quote-card">
+        « Tu as le droit d’être fatigué, mais tu as aussi le droit de recommencer autrement, plus doucement, plus lucidement. »
+        <span>— Renée-Lise Vilosa</span>
+      </article>
+    </section>
+
+    <p class="note-fin">
+      Cette page te montre seulement quelques éclats du Tome 2.
+      <span>
+        Les outils complets, les versions bilingues et les cartes imprimables A6/A4 sont disponibles
+        dans les packs Premium & Master Premium de “Papa, Homme & Leader”.
+      </span>
+    </p>
+
+    <div class="back-top">
+      <a href="#top">↑ Retour en haut</a>
+    </div>
+  </div>
+</body>
+</html>
